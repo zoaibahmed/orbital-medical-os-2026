@@ -19,10 +19,10 @@ Current project: **Orbital Medical OS / Aesculus**, `D:\nasa-hackathon`.
 - [x] User approved new public repository/account and public redistribution of team code/research.
 - [x] README, source map, integration/API reports, test results and attribution prepared.
 - [x] Staged/history pattern and document audit: 303 files / 250 history blobs, no findings; npm audit: zero vulnerabilities. Publication verification follows below.
-- [ ] Approved public submission remote/commit verified anonymously.
-- [ ] Final submission report updated with verified URLs and commit.
+- [x] Approved public repository verified anonymously; remote `main` matches tested implementation `072402f51644ace14ba36a345acfe5f02158fad3`; required paths exist.
+- [x] README rendered HTML verified with HTTP 200; final report contains verified URLs, commit and remaining limitations.
 
-The final three publication/evidence boxes are completed only after execution. They are not permission requests.
+Publication evidence was recorded after execution. Repository: https://github.com/zoaibahmed/orbital-medical-os-2026 . Source publication does not imply live website deployment. A documentation-only follow-up records the completed verification without changing the tested code.
 
 ## Scope classification
 

@@ -1,6 +1,6 @@
 # Final NASA Hackathon submission report
 
-Assessment date: **15 November 2026**. Current verification status: integrated code and local execution verified; publication evidence is updated after the security gate below.
+Assessment date: **15 November 2026**. **Integrated code, local execution and public source publication are verified.**
 
 ## 1. Project and authoritative folder
 
@@ -89,7 +89,7 @@ Runtime model/font/decoder provenance was inspected: original room/equipment/map
 
 Environment files, record stores, original archives, node_modules, build output, caches and generated capture/measurement directories are excluded. Executed pattern/document-XML scan: **303 indexed files**, **250 reachable historical blobs / 225,778,764 bytes**, **zero findings**. Provider-token, private-key, credential-URI, secret-assignment and excluded-artifact checks were used; no secret values were printed. This is an executed scoped source audit, not a claim of formal penetration testing. `npm audit --json` returned **zero info/low/moderate/high/critical vulnerabilities** for the installed lockfile. Final staged content and ignored boundaries were reviewed before publication.
 
-Publication/remote/anonymous-read evidence and the actual code commit SHA are recorded below after execution; no URL is presented as verified before that step.
+Publication/remote/anonymous-read evidence and the actual code commit SHA are recorded below. Two preserved Blender authoring files triggered GitHub's recommended 50 MB size warning (61.08 and 61.68 MB), but the push succeeded. No file exceeded the enforced 100 MB individual-file limit; no runtime model was removed to reduce publication size.
 
 ## 12. Submission-readiness verdict
 
@@ -103,4 +103,20 @@ Publication/remote/anonymous-read evidence and the actual code commit SHA are re
 
 **Not implemented:** real patient/sensor telemetry, internal clinical imaging, external AI, real emergency actuation, production authentication/multi-user medical storage and live website hosting.
 
-**External blocker / unavoidable user action:** none identified for local demonstration or the already-authorized source publication; final publication outcome is recorded after verification. Clinical/production deployment requires separate domain/security work and is not claimed by this submission.
+**External blocker / unavoidable user action:** **none** for the delivered local demonstration and verified public source repository. Clinical/production deployment requires separate domain/security work and is not claimed by this submission.
+
+## 13. Verified public submission and code revision
+
+- Repository: **https://github.com/zoaibahmed/orbital-medical-os-2026**
+- README: **https://github.com/zoaibahmed/orbital-medical-os-2026/blob/main/README.md**
+- Verified implementation commit: **`072402f51644ace14ba36a345acfe5f02158fad3`**
+- Stable tested-code link: **https://github.com/zoaibahmed/orbital-medical-os-2026/commit/072402f51644ace14ba36a345acfe5f02158fad3**
+- Published branch: remote `main`; local `submission-main` tracks `submission/main`.
+- Anonymous GitHub API verification: `private: false`, default branch `main`, **303 files**, non-truncated tree, required frontend/backend/package/docs/patient model paths present.
+- Remote ref and local implementation SHA matched. Root implementation commit has **zero parents** and uses the verified GitHub noreply address, excluding old personal author metadata from the new public history.
+- Unauthenticated GitHub README HTML returned **200** and contained the rendered project H1, Quick start and `npm run dev:all` instructions. The connected GitHub source tool also retrieved `server/app.js` successfully.
+- `origin` remains the previous frontend repository; only the new `submission` remote received a push. No teammate-repository push or force-push occurred.
+
+The implementation commit identifies the exact code/asset snapshot that was tested. A documentation-only follow-up records this already-executed publication verification; it does not change application behavior. The final delivery message identifies that final documentation tip separately when needed. GitHub source publication is **not** a live website deployment.
+
+Local application remains available at **http://127.0.0.1:5001/** through the verified `npm start` workflow. The API health endpoint is **http://127.0.0.1:5001/api/health-check**. No credential or database setup is required for the fictional local demonstration.

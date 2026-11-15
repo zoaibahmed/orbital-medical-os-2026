@@ -49,8 +49,8 @@ Publication uses a clean initial snapshot on `submission-main` with the verified
 | 6 — shared state | Crew-scoped medical modules and shared DOM/3D monitor verified; five repeated connected transitions retain Canvas/GLB cache. |
 | 7 — regression tests | 47 frontend unit tests; final full browser run 41/41 passed; TypeScript/build/lint pass. Numeric hardware profile is recorded in `TEST_RESULTS.md`. |
 | 8 — documentation | README, API contract, source map, test results, attribution and submission checklist prepared. |
-| 9 — publication | Authorized destination: `zoaibahmed/orbital-medical-os-2026`. Final security/publication evidence belongs in the final report. Never push to the original teammate repository. |
-| 10 — final assessment | Final report distinguishes tested functionality, simulation, domain-review dependencies, publication verification and unresolved limitations. |
+| 9 — publication | New public `zoaibahmed/orbital-medical-os-2026` verified anonymously at tested code commit `072402f51644ace14ba36a345acfe5f02158fad3`; source/dependency checks have zero findings. Original remotes untouched. |
+| 10 — final assessment | Final report records verified repo/README/code SHA, 41 browser scenarios, hardware metrics, functional classifications and remaining scientific/deployment limitations. |
 
 Initial regression runs found a controlled-checkbox timing issue, hidden-radio pointer obstruction and a test selector that targeted an older same-labelled exercise. Those were corrected before the final 41/41 browser run. No test was deleted to obtain a pass. Earlier failed runs are not counted as final successful results.
 
