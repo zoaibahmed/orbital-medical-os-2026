@@ -1,6 +1,6 @@
 import type { CrewSnapshot, ProtocolContent, SleepRecord } from './contracts'
 export type ExaminationState='EMPTY_BED'|'PATIENT_READY'|'EXAMINATION_ACTIVE'|'SCAN_ACTIVE'|'EXAMINATION_COMPLETE'
-export type BodyRegion='Head and eyes'|'Chest'|'Spine'|'Upper limbs'|'Lower limbs'|'Muscle groups'
+export type BodyRegion='Full body'|'Head and eyes'|'Chest'|'Spine'|'Upper limbs'|'Lower limbs'|'Muscle groups'
 export interface ExerciseEntry { id:string; type:string; minutes:number; date:string; completed:boolean }
 export interface CheckIn { id:string; mood:number; stress:number; note:string; date:string }
 export interface AssistantRequest { crewId:string; snapshot:CrewSnapshot; region:BodyRegion; message:string; alerts:readonly string[] }

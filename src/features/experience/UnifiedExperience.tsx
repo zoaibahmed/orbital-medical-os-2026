@@ -21,6 +21,8 @@ import { ModulePreview } from './ModulePreview'
 import { chapterNames, resolveExperience, resolveFocus } from './experienceRoutes'
 import { useCrewApi } from '../../services/api/context'
 import { ConnectionStatus } from '../../services/api/ConnectionStatus'
+import { ScannerClock } from '../physical/ScannerClock'
+import { scannerRuntime } from '../../state/scanner'
 
 const MedicalBayCanvas = lazy(() => import('../../scene/MedicalBayCanvas'))
 type Sheet = 'crew' | 'details' | 'modules' | 'preview' | null
@@ -75,6 +77,13 @@ export function UnifiedExperience() {
   const onPrepared=useCallback(()=>setGpuPrepared(true),[])
   const onError = useCallback(() => { setFailed(true); setReady(false) }, [])
   const onLost = useCallback(() => { setLost(true); setReady(false) }, [])
+  useEffect(()=>{scannerRuntime.setCameraReady((!enabled||!supported||failed||lost||ready)&&!cameraMoving)},[enabled,supported,failed,lost,ready,cameraMoving])
+  useEffect(()=>{
+    const examine=()=>{input.current.destination='physical';input.current.focus=null;setFocus(null);input.current.invalidate?.()}
+    const overview=()=>{skipRouteScroll.current=false;navigate(`/bay/overview?${new URLSearchParams(routeRef.current.search)}`)}
+    window.addEventListener('orbital:examination-view',examine);window.addEventListener('orbital:overview',overview)
+    return()=>{window.removeEventListener('orbital:examination-view',examine);window.removeEventListener('orbital:overview',overview)}
+  },[navigate])
   useEffect(() => { routeRef.current = { path, search: location.search, crewId: astronaut.id } }, [path, location.search, astronaut.id])
   useEffect(() => { if (route.station === 'emergency' && !invalid) setEmergencyOpen(true) }, [route.station, invalid, setEmergencyOpen])
   useEffect(() => {
@@ -209,7 +218,7 @@ export function UnifiedExperience() {
   }
   const recovery = <div className="scene-recovery-note" role="status"><strong>Spatial view unavailable</strong><span>{lost ? 'The graphics connection was interrupted.' : 'Medical data and mission controls remain available.'}</span>{supported && <button onClick={retry}>Retry 3D view</button>}</div>
   const selectionLabel = focus === 'scanner' ? 'Diagnostic scanner' : focus === 'equipment' ? 'Diagnostic trolley' : 'Examination cradle'
-  return <div className="orbital-os"><AutomaticMonitoringAudio feed={monitoring} active={monitoringActive} allowed={audioAllowed}/>
+  return <div className="orbital-os"><ScannerClock crewId={astronaut.id} region={clinical.region}/><AutomaticMonitoringAudio feed={monitoring} active={monitoringActive} allowed={audioAllowed}/>
     <div className="os-scene" aria-label="Persistent medical bay environment" data-testid="persistent-scene">
       {enabled && supported && <ErrorBoundary key={attempt} onError={onError} fallback={recovery}><Suspense fallback={null}><MedicalBayCanvas view={focus === 'equipment' ? 'equipment' : chapter === 2 || focus ? 'examination' : 'overview'} onSelect={selectModel} onReady={onReady} onLoaded={onLoaded} onPrepared={onPrepared} onContextLost={onLost} quality={quality} reducedMotion={reduced} benchmark={false} standbyRun={standbyRun} resetToken={attempt} director={input} warmup renderReady={ready} monitoring={{ feed: monitoring, astronaut }} /></Suspense></ErrorBoundary>}
       {(!ready || lost) && <div className="os-loading-space"><svg viewBox="0 0 400 400" fill="none" aria-hidden="true"><path d="M60 300V160a140 140 0 0 1 280 0v140M75 300V160a125 125 0 0 1 250 0v140M90 302h220l-25-42H115l-25 42Zm35 6v40m150-40v40M145 217h110v40H145zM175 175h50v36h-50z"/><circle cx="200" cy="140" r="7"/></svg><span>{patientFailed ? 'Patient unavailable / medical controls remain available' : enabled && supported && !failed && !lost ? !assetsLoaded?'Loading medical bay assets':patientAsset.status!=='ready'?'Preparing patient and materials':!gpuPrepared?'Preparing lighting and shaders':'Presenting medical bay'  : 'Medical workspace / Spatial alternative'}</span>{enabled&&supported&&!failed&&!lost&&(patientFailed?<button style={{pointerEvents:'auto'}} onClick={retryPatientAsset}>Retry patient asset</button>:<progress aria-label="Medical bay preparation" max={4} value={preparationSteps}/>)}</div>}

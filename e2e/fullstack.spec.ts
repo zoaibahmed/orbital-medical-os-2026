@@ -26,17 +26,19 @@ test('actual production browser requests update typed crew vitals and preserve o
 
 test('exercise and SANS submissions reach the server, survive reload and retain unknown observations',async({page})=>{
   await page.setViewportSize({width:390,height:844});await page.goto('/bay/physical?crew=crew-02');await connected(page)
+  await page.getByRole('tab',{name:'Exercise',exact:true}).click()
   const posted=page.waitForResponse(r=>r.url().includes('/api/health/exercise-log?')&&r.request().method()==='POST')
   await page.getByRole('button',{name:'Save exercise plan',exact:true}).click()
   const exercise=(await(await posted).json()).data
   const checkbox=page.locator(`input[data-record-id="${exercise.id}"]`)
   await expect(checkbox).toBeVisible();await checkbox.check()
   await expect(checkbox).toBeChecked()
+  await page.getByRole('tab',{name:'Vision check',exact:true}).click()
   await page.getByRole('group',{name:'Distance vision looked blurry'}).getByRole('radio',{name:'Yes',exact:true}).check()
   await page.getByRole('group',{name:'Double vision'}).getByRole('radio',{name:'Unsure',exact:true}).check()
   await page.getByRole('button',{name:'Save SANS observations to backend'}).click()
   await expect(page.getByText(/SANS observations saved\. No clinical grade/)).toBeVisible()
-  await page.reload();await connected(page)
+  await page.reload();await connected(page);await page.getByRole('tab',{name:'Vision check',exact:true}).click()
   await expect(page.getByRole('group',{name:'Distance vision looked blurry'}).getByRole('radio',{name:'Yes',exact:true})).toBeChecked()
   const state=await(await page.request.get('/api/crew/crew-02/state')).json()
   expect(state.records.exercises.find((row:{id:string})=>row.id===exercise.id).completed).toBe(true)
@@ -75,7 +77,7 @@ test('radiation controls change the shared backend scenario and show neutron dos
   await page.getByLabel('Radiation environment').selectOption('1')
   await expect(page.getByText(/critical \/ backend scenario SOLAR_FLARE/)).toBeVisible()
   await page.getByLabel('Exposure trend').selectOption('neutronCount')
-  await expect(page.getByRole('table')).toContainText('µSv/h neutron dose equivalent')
+  await expect(page.getByRole('table')).toContainText('ÂµSv/h neutron dose equivalent')
   const state=await(await page.request.get('/api/crew/crew-02/state')).json()
   expect(state.snapshot.radiation.environment).toBe('SPE-demo')
   expect((await(await page.request.get('/api/crew/crew-01/state')).json()).mode).toBe('NOMINAL')
@@ -127,4 +129,35 @@ test('real telemetry preserves the persistent scene, breathing patient, camera o
   expect(await page.locator('canvas').evaluate((node,original)=>node===original,canvas)).toBe(true)
   expect(glbs.length).toBe(count)
   await expect(page.locator('canvas')).toHaveAttribute('data-monitor-source','backend-simulation')
+})
+
+test('one continuous crew-scoped mission journey exercises every medical operation and all emergency backend rehearsals',async({page})=>{
+  test.setTimeout(180000)
+  await page.addInitScript(()=>{window.__orbitalProbe={active:false,frames:[],react:[],lifecycles:[],resources:[]}})
+  const glbs:string[]=[],errors:string[]=[];page.on('request',r=>{if(r.url().includes('.glb'))glbs.push(r.url())});page.on('pageerror',e=>errors.push(e.message))
+  await page.goto('/');await ready(page);await settled(page)
+  const original=await page.locator('canvas').elementHandle(),count=glbs.length
+  await page.getByRole('button',{name:/Enter the medical bay/}).click();await settled(page)
+  await page.getByRole('button',{name:/Crew and display settings/}).click();await page.getByRole('combobox',{name:'Astronaut',exact:true}).selectOption('crew-02');await page.keyboard.press('Escape')
+  await chapter(page,'Biometrics');await settled(page);await connected(page);await expect(page.getByTestId('heart-rate')).toContainText('bpm');await expect(page.locator('canvas')).toHaveAttribute('data-monitor-crew','crew-02')
+  async function module(label:string){
+    if(await page.getByRole('button',{name:'Close mission view'}).isVisible())await page.getByRole('button',{name:'Close mission view'}).click()
+    await page.getByRole('button',{name:'Medical index',exact:true}).click();await page.getByRole('navigation',{name:'Medical modules'}).getByRole('button',{name:new RegExp(label)}).click();await connected(page)
+  }
+  await module('Physiological');await page.getByRole('combobox',{name:'Examination region'}).selectOption('Full body');await page.getByRole('button',{name:'Prepare examination',exact:true}).click();await page.getByRole('button',{name:'Start demonstration scan',exact:true}).click()
+  await expect.poll(()=>page.locator('canvas').getAttribute('data-gantry-offset').then(Number)).toBeGreaterThan(1.7)
+  await expect(page.locator('canvas')).toHaveAttribute('data-scan-phase','complete',{timeout:20000});await expect(page.locator('canvas')).toHaveAttribute('data-gantry-offset','0.000000');await expect(page.locator('.result-context')).toContainText('Sam Rivera')
+  await page.getByRole('combobox',{name:'Examination region'}).selectOption('Spine');await page.getByRole('tab',{name:'Assessment',exact:true}).click();await expect(page.getByRole('heading',{name:'Bone and muscle',exact:true})).toBeVisible()
+  await page.getByRole('tab',{name:'Exercise',exact:true}).click();const created=page.waitForResponse(r=>r.url().includes('/api/health/exercise-log?')&&r.request().method()==='POST');await page.getByRole('button',{name:'Save exercise plan',exact:true}).click();const record=(await(await created).json()).data;const checkbox=page.locator(`input[data-record-id="${record.id}"]`);await checkbox.check();await expect(checkbox).toBeChecked()
+  await page.getByRole('tab',{name:'Vision check',exact:true}).click();await page.getByRole('group',{name:'Distance vision looked blurry'}).getByRole('radio',{name:'No',exact:true}).check();await page.getByRole('button',{name:'Save SANS observations to backend'}).click();await expect(page.getByText(/SANS observations saved/)).toBeVisible()
+  await module('Space radiation');await page.getByLabel('Radiation environment').selectOption('1');await expect(page.getByText(/backend scenario SOLAR_FLARE/)).toBeVisible();await page.getByLabel('Exposure trend').selectOption('neutronCount');await expect(page.getByRole('table')).toContainText('neutron dose equivalent');await page.getByLabel('Radiation environment').selectOption('0');await expect(page.getByText(/backend scenario NOMINAL/)).toBeVisible()
+  await module('Psychological');const note=`Local complete mission ${Date.now()}`;await page.getByLabel('Optional check-in notes').fill(note);await page.getByRole('button',{name:'Save check-in',exact:true}).click();await expect(page.getByText(note,{exact:true})).toBeVisible();await page.getByRole('button',{name:'Save supplied sleep record',exact:true}).click();await expect(page.getByText(/Sleep record saved/)).toBeVisible();await page.getByRole('button',{name:'Support pathways',exact:true}).click();await expect(page.getByText(/mission-designated behavioural health/)).toBeVisible()
+  await module('AI diagnostics');const reply=page.waitForResponse(r=>r.url().includes('/api/ai/assist?')&&r.request().method()==='POST');await page.getByLabel('Ask onboard assistance').fill('explain sleep for my crew');await page.getByRole('button',{name:'Send message',exact:true}).click();const assistance=(await(await reply).json()).data.response;expect(assistance).toContain('for crew-02');await expect(page.getByRole('log')).toContainText(assistance)
+  await page.getByRole('button',{name:'Emergency access',exact:true}).click()
+  for(const [name,type] of [['Sudden depressurization','RAPID_DEPRESS'],['Elevated radiation event','SOLAR_SPE'],['Severe crew injury','GENERAL_EMERGENCY']]){
+    await page.getByRole('button',{name,exact:true}).click();await page.getByRole('button',{name:'Register backend rehearsal',exact:true}).click();await expect(page.getByText(`Backend rehearsal active / ${type}`,{exact:true})).toBeVisible();await page.getByRole('dialog',{name:'Emergency interface rehearsal'}).getByRole('checkbox').first().check();await expect(page.getByText('1 / 3 rehearsal acknowledgments')).toBeVisible();await page.getByRole('button',{name:'Clear backend rehearsal',exact:true}).click();await expect(page.getByText('Backend rehearsal inactive',{exact:true})).toBeVisible()
+  }
+  await page.getByRole('button',{name:'Return to station'}).click();await chapter(page,'Explore');await settled(page)
+  const state=await(await page.request.get('/api/crew/crew-02/state')).json();expect(state.records.exercises.find((r:{id:string})=>r.id===record.id).completed).toBe(true);expect(state.records.checkIns.some((r:{notes:string})=>r.notes===note)).toBe(true);expect(state.emergency.isActive).toBe(false)
+  expect(await page.locator('canvas').evaluate((node,before)=>node===before,original)).toBe(true);expect(glbs.length).toBe(count);expect(errors).toEqual([])
 })

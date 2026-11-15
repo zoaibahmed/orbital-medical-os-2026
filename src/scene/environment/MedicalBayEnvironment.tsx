@@ -11,6 +11,10 @@ import { createBayMaterials, disposeBayMaterials } from './materials'
 import { recordResource } from '../quality/probeStore'
 import { releaseBedRestraints } from './releasedRestraints'
 import { useClinical } from '../../state/clinical'
+import { separateScannerAssembly } from './scannerMechanism'
+import { scannerRuntime } from '../../state/scanner'
+import { scannerTravel } from './scannerMeasurements'
+import { isScanMoving } from '../../features/physical/scanTimeline'
 
 function ModelInstance({ model, materials, kind, selected, onSelect, reducedMotion, standbyRun, liveDisplay, occupied, scanning }: { model: GLTF; materials: Map<string, MeshStandardMaterial>; kind: CameraView; selected: boolean; onSelect: (view: CameraView) => void; reducedMotion: boolean; standbyRun: number; liveDisplay: boolean; occupied:boolean; scanning:boolean }) {
   const [hovered, setHovered] = useState(false)
@@ -18,7 +22,7 @@ function ModelInstance({ model, materials, kind, selected, onSelect, reducedMoti
   const invalidate = useThree(state => state.invalidate)
   const gl=useThree(state=>state.gl)
   const pulse = useRef({ active: false, started: 0 })
-  const { scene, highlightMaterials, indicatorMaterials } = useMemo(() => {
+  const { scene, highlightMaterials, indicatorMaterials, gantry, restraints } = useMemo(() => {
     recordResource('model-instance-cloned')
     const scene = model.scene.clone(true)
     const highlightMaterials: MeshStandardMaterial[] = []
@@ -42,9 +46,30 @@ function ModelInstance({ model, materials, kind, selected, onSelect, reducedMoti
         indicatorMaterials.push(object.material)
       }
     })
-    return { scene, highlightMaterials, indicatorMaterials }
+    const gantry=kind==='examination'?separateScannerAssembly(scene):null
+    const restraints=kind==='examination'?releaseBedRestraints(scene):null
+    return { scene, highlightMaterials, indicatorMaterials, gantry, restraints }
   }, [model, kind, materials, liveDisplay])
-  const restraints=useMemo(()=>kind==='examination'?releaseBedRestraints(scene):null,[kind,scene])
+  useEffect(()=>()=>gantry?.dispose(),[gantry])
+  useEffect(()=>{
+    if(!gantry)return
+    canvas.dataset.gantryTriangles=String(gantry.triangles)
+    canvas.dataset.gantryTravelLimit=scannerTravel.endZ.toFixed(6)
+    canvas.dataset.gantryParts=String(gantry.moving.children.length)
+    const apply=(frame:ReturnType<typeof scannerRuntime.getSnapshot>)=>{
+      gantry.move(frame.offset)
+      const travelling=isScanMoving(frame.phase)
+      if(gantry.setTravelling(travelling))canvas.dataset.sceneRevision=String(Number(canvas.dataset.sceneRevision??0)+1)
+      canvas.dataset.gantryLayer=travelling?'live':'cached'
+      indicatorMaterials.forEach(material=>{material.emissiveIntensity=frame.phase==='complete'?.48:frame.phase==='ready'||frame.phase==='cancelled'?.08:.9})
+      canvas.dataset.gantryOffset=frame.offset.toFixed(6);canvas.dataset.gantryPlaneZ=(scannerTravel.apertureZ+frame.offset).toFixed(6)
+      canvas.dataset.scanProgress=frame.progress.toFixed(6);canvas.dataset.scanPhase=frame.phase
+      canvas.dataset.scanCrew=frame.crewId;canvas.dataset.scanRegion=frame.region
+      invalidate()
+    }
+    gantry.move(0);canvas.dataset.gantryOffset='0.000000'
+    return scannerRuntime.attach(apply)
+  },[gantry,canvas,invalidate,indicatorMaterials])
   useEffect(()=>{restraints?.setOccupied(occupied);if(restraints){canvas.dataset.restraintTriangles=String(restraints.triangles);canvas.dataset.restraints=occupied?'released':'flat'}canvas.dataset.sceneRevision=String(Number(canvas.dataset.sceneRevision??0)+1);gl.shadowMap.needsUpdate=true;invalidate()},[occupied,restraints,canvas,gl,invalidate])
   useEffect(()=>()=>restraints?.dispose(),[restraints])
   useEffect(() => {
@@ -61,7 +86,7 @@ function ModelInstance({ model, materials, kind, selected, onSelect, reducedMoti
   useEffect(() => {
     if (kind !== 'examination') return
     pulse.current = { active: standbyRun > 0 && !reducedMotion, started: performance.now() }
-    indicatorMaterials.forEach(material => { material.emissiveIntensity = scanning ? 1.2 : .65 })
+    indicatorMaterials.forEach(material => { material.emissiveIntensity = scanning ? .9 : scannerRuntime.current()?.phase==='complete'?.48:.08 })
     canvas.dataset.scannerAnimation = standbyRun === 0 ? 'idle' : reducedMotion ? 'static' : 'running'
     invalidate()
   }, [standbyRun, reducedMotion, kind, indicatorMaterials, canvas, invalidate, scanning])

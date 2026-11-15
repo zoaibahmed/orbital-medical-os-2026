@@ -5,6 +5,7 @@ import App from './app/App'
 import { ErrorBoundary } from './ui/ErrorBoundary'
 import './styles/operations.css'
 import './styles/integration.css'
+import './styles/refinement.css'
 
 const root = document.getElementById('root')
 if (!root) throw new Error('Application root is missing')

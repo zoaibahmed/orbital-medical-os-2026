@@ -1,0 +1,80 @@
+/* Local component refinement: established aerospace colours/type remain authoritative. */
+.orbital-os .os-dialog.inspection-interface{padding:24px;border-radius:8px 8px 8px 20px;overscroll-behavior:contain;scroll-padding-block:100px 28px;scrollbar-gutter:stable}
+.orbital-os .os-dialog.inspection-interface:has(.clinical-section){width:min(640px,calc(100vw - 48px));max-height:calc(100svh - 176px)}
+.orbital-os .os-dialog-heading{top:-24px;margin:-1px -1px 0;padding:4px 0 14px;gap:12px;border-bottom:1px solid var(--seam);align-items:center}
+.orbital-os .os-dialog-heading .system-label{font-size:13px;max-width:none}
+.orbital-os .os-dialog-heading button:not(.emergency-access){margin:0;border:1px solid var(--seam);border-radius:6px;line-height:1;font-size:25px}
+.orbital-os .os-dialog-heading .emergency-access{margin-left:auto;font-size:13px;padding:8px 12px;min-height:44px}
+.orbital-os .os-dialog>h2{font-size:clamp(28px,2.6vw,36px);line-height:1.15;margin:20px 0}
+.orbital-os .clinical-section{display:grid;gap:18px;font-size:15px;line-height:1.6;min-width:0}
+.orbital-os .clinical-section .clinical-section{gap:18px}
+.orbital-os .clinical-section>h3,.orbital-os .operation-section>h3{font-size:25px;line-height:1.2;margin:12px 0 0}
+.orbital-os .clinical-section h4{font:500 21px/1.3 'Barlow Condensed',sans-serif;margin:0}
+.orbital-os .clinical-section p,.orbital-os .clinical-section li{font-size:15px;line-height:1.6;overflow-wrap:anywhere}
+.orbital-os .clinical-section small,.orbital-os .data-ledger small,.orbital-os .os-dialog .os-provenance{font-size:12px;line-height:1.5}
+.orbital-os .clinical-section label,.orbital-os .operation-field{font-size:14px;font-weight:500;line-height:1.5;display:grid;gap:8px;min-width:0}
+.orbital-os .clinical-section select,.orbital-os .clinical-section input:not([type=checkbox]):not([type=radio]):not([type=range]),.orbital-os .clinical-section textarea,.orbital-os .os-field select{width:100%;min-height:46px;border:1px solid #789186;border-radius:6px;background-color:#20382e;color:var(--ceramic);padding:11px 12px;font:400 15px/1.5 Barlow,sans-serif;min-width:0;color-scheme:dark}
+.orbital-os .clinical-section select,.orbital-os .os-field select{padding-right:34px;appearance:auto;cursor:pointer}
+.orbital-os .clinical-section select:hover,.orbital-os .clinical-section input:hover,.orbital-os .clinical-section textarea:hover{border-color:var(--teal)}
+.orbital-os :is(button,select,input,textarea,summary,[role=tabpanel]):focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.orbital-os .clinical-section textarea{min-height:110px;resize:vertical}
+.orbital-os .clinical-section input[type=range]{width:100%;height:36px;accent-color:var(--teal)}
+.orbital-os .clinical-section button,.emergency-dialog button{min-height:44px;padding:10px 14px;border:1px solid var(--seam);border-radius:6px;font-size:14px;font-weight:500;line-height:1.4;text-align:center;transition:background-color .15s,border-color .15s}
+.orbital-os .clinical-section button:hover:not(:disabled),.emergency-dialog button:hover:not(:disabled){background:#294b39;border-color:var(--teal)}
+.orbital-os .clinical-section button:disabled,.emergency-dialog button:disabled{opacity:.55;cursor:not-allowed}
+.orbital-os .clinical-section form{padding:18px;border:1px solid var(--seam);border-radius:8px;gap:16px;background:#152a20}
+.orbital-os .clinical-section form>button[type=submit],.orbital-os .clinical-section form>button:not([type]){background:var(--teal);color:#10271c;border-color:var(--teal);font-weight:600;justify-self:start;min-width:155px}
+.operation-workspace,.operation-section{display:grid;gap:20px;min-width:0}
+.operation-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:5px;border:1px solid var(--seam);border-radius:8px;background:#102219}
+.orbital-os .operation-tabs [role=tab]{padding:10px 5px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:14px}
+.orbital-os .operation-tabs [role=tab][aria-selected=true]{border-color:var(--teal);color:var(--ceramic);background:#2d4b37}
+.operation-tabpanel[hidden]{display:none!important}.operation-tabpanel{outline-offset:5px}
+.examination-control{display:grid;gap:18px;min-width:0}
+.examination-heading{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.operation-kicker{font-size:12px;color:var(--muted)}.examination-heading h3{font:500 29px/1.15 'Barlow Condensed',sans-serif;margin-top:4px}
+.operation-status{font-size:13px;line-height:1.4;padding:7px 11px;border:1px solid var(--teal);border-radius:5px;color:var(--teal);text-align:center}
+.operation-status[data-phase=error],.operation-status[data-phase=cancelled]{border-color:var(--alert);color:var(--alert)}
+.subject-context{display:grid;gap:4px;padding:14px 16px;background:#233b2d;border-left:3px solid var(--teal);border-radius:4px}
+.subject-context strong{font-size:20px;font-weight:500}.subject-context span{font-size:13px;color:var(--muted)}
+.examination-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;padding:0;list-style-position:inside;counter-reset:step;margin:0}
+.examination-steps li{font-size:13px!important;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--seam)}
+.examination-steps li[data-current=true]{color:var(--teal);border-color:var(--teal)}
+.operation-description{color:var(--ceramic)}.operation-note{color:var(--muted);font-size:13px!important;line-height:1.6}
+.scan-progress{display:grid;gap:10px;padding:18px;background:#10251a;border:1px solid #608571;border-radius:8px}
+.scan-progress>div{display:flex;justify-content:space-between;gap:16px;font-size:15px}.scan-progress strong{font-size:23px;font-weight:500;font-variant-numeric:tabular-nums}
+.scan-progress progress{width:100%;height:9px;accent-color:var(--teal);border:0;overflow:hidden;border-radius:4px;background:#304b3d}
+.scan-progress progress::-webkit-progress-bar{background:#304b3d}.scan-progress progress::-webkit-progress-value{background:var(--teal)}
+.scan-progress p{font-size:13px!important;color:var(--muted);margin:0!important;min-height:42px}
+.examination-primary-actions{display:flex;flex-wrap:wrap;gap:10px}
+.orbital-os .clinical-section .operation-primary{background:var(--teal);color:#10271c;border-color:var(--teal);font-weight:600;flex:1;min-width:180px}
+.orbital-os .clinical-section .operation-secondary{background:#254232;border-color:#809e8a;color:var(--ceramic)}
+.orbital-os .clinical-section .operation-reset{border-color:#9a7560;color:var(--alert);background:transparent}
+.orbital-os .clinical-section .operation-primary:hover:not(:disabled),.orbital-os .clinical-section form>button[type=submit]:hover:not(:disabled),.orbital-os .clinical-section form>button:not([type]):hover:not(:disabled){background:#b6e3d5;color:#10271c;border-color:var(--teal)}
+.scan-results{display:grid;gap:15px;padding-top:20px;border-top:2px solid var(--teal)}
+.result-context{display:grid;gap:10px}.result-context>div{display:grid;grid-template-columns:110px 1fr;gap:10px}.result-context dt{font-size:13px;color:var(--muted)}.result-context dd{margin:0;font-size:14px}
+.measurement-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.orbital-os .team-medical-panel{padding:16px;border:1px solid var(--seam);border-radius:7px;background:#172e22}
+.orbital-os .team-medical-panel>header{align-items:start;margin-bottom:12px}.orbital-os .team-medical-panel h3{font-size:24px;line-height:1.2}.orbital-os .team-measurement{padding:12px 0;gap:6px}
+.orbital-os .team-measurement>span{font-size:14px}.orbital-os .team-measurement strong{font:500 30px/1.15 'Barlow Condensed',sans-serif}.orbital-os .team-measurement small{font-size:12px}
+.orbital-os .data-ledger{display:grid;gap:10px}.orbital-os .data-ledger>div{padding:14px 16px;background:#172e22;border:1px solid var(--seam);border-radius:6px;align-items:start}
+.orbital-os .data-ledger dt{font-size:14px}.orbital-os .data-ledger dd{font-size:19px;font-variant-numeric:tabular-nums}
+.orbital-os .clinical-section .sans-question{padding:16px;border:1px solid #668171;border-radius:7px;min-width:0;gap:14px;background:#10251a}
+.sans-question legend{padding:0 6px;font-size:15px;line-height:1.55;max-width:100%;font-weight:500}
+.sans-answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.orbital-os .clinical-section .sans-answer{display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;padding:8px;border:1px solid #789585;border-radius:6px;cursor:pointer;color:var(--muted);font-size:14px}
+.orbital-os .clinical-section .sans-answer[data-selected=true]{color:var(--ceramic);border-color:var(--teal);background:#31513d}
+.sans-answer-label{font-weight:500}.orbital-os .sans-answer input{width:17px;height:17px;flex-shrink:0}
+.orbital-os .region-selector{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.orbital-os .operation-section>ul{display:grid;gap:10px;padding:0;list-style:none;margin:0}
+.orbital-os .operation-section>ul li{padding:14px;border:1px solid var(--seam);border-radius:6px;background:#172e22}
+.orbital-os .operation-section>ul li label{display:flex;align-items:center;gap:12px;min-height:38px;line-height:1.6}
+.orbital-os .clinical-section :is(label:has(>input[type=checkbox])){display:flex;align-items:center;gap:10px;min-height:44px}
+.orbital-os .clinical-section details{border-top:1px solid var(--seam);padding-top:8px;min-width:0}
+.orbital-os .clinical-section summary{font-size:14px;font-weight:500;min-height:44px;padding-block:10px;cursor:pointer;color:var(--teal)}
+.operation-feedback:not(:empty){padding:12px 14px;border-left:3px solid var(--teal);background:#203b2b;color:var(--ceramic);border-radius:4px}
+.orbital-os .os-dialog table{width:100%;font-size:14px;line-height:1.5;border-collapse:collapse}.orbital-os .os-dialog :is(th,td){padding:10px 8px;text-align:left;white-space:normal;overflow-wrap:anywhere}.orbital-os .os-dialog caption{font-size:13px;color:var(--muted);text-align:left;padding-bottom:10px}
+.orbital-os .api-connection{font-size:13px;padding:10px 0;gap:8px}.orbital-os .api-connection small{font-size:12px}
+.emergency-dialog{width:min(580px,calc(100vw - 32px));padding:28px;overflow:auto;scroll-padding-block:20px;overscroll-behavior:contain}.emergency-dialog p,.emergency-dialog li{font-size:15px;line-height:1.65}.emergency-dialog nav{gap:10px}.emergency-dialog li{padding:12px;border:1px solid var(--seam);border-radius:6px}.emergency-dialog ol{display:grid;gap:10px}
+.emergency-dialog .button{background:var(--teal);color:#10271c;border-color:var(--teal)}.emergency-dialog .button:hover:not(:disabled){background:#b6e3d5;color:#10271c}.emergency-dialog li label{display:flex;gap:12px;align-items:start;min-height:44px;cursor:pointer}.emergency-dialog li input{width:18px;height:18px;margin-top:4px;flex-shrink:0;accent-color:var(--teal)}.emergency-dialog :is(button,input):focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+@media(max-width:767px){.orbital-os .os-dialog.inspection-interface,.orbital-os .os-dialog.inspection-interface:has(.clinical-section){inset:130px 10px auto;width:calc(100vw - 20px);max-height:calc(100svh - 146px);padding:18px;scroll-padding-top:96px}.orbital-os .os-dialog-heading{top:-18px;gap:8px}.orbital-os .os-dialog-heading .system-label{font-size:11px;max-width:90px}.orbital-os .os-dialog-heading .emergency-access{font-size:12px;padding:7px}.operation-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.examination-heading{align-items:start}.examination-heading h3{font-size:26px}.measurement-grid{gap:10px}.orbital-os .clinical-section .sans-question{padding:13px}.sans-answers{gap:8px}.orbital-os .clinical-section .sans-answer{padding:8px 3px;font-size:13px}.orbital-os .clinical-section form{padding:14px}.examination-primary-actions>button{width:100%}.result-context>div{grid-template-columns:1fr;gap:3px}.orbital-os .team-measurement strong{font-size:26px}.orbital-os .data-ledger dd{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.orbital-os .clinical-section button,.emergency-dialog button{transition:none}}

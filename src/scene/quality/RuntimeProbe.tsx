@@ -29,6 +29,17 @@ export function RuntimeProbe() {
       const b=new Box3().setFromObject(patient,true)
       return {visible:patient.visible,bounds:[b.min.toArray(),b.max.toArray()],meshes}
     }
+    probe.scannerSnapshot=()=>{
+      const gantry=scene.getObjectByName('physical-scanner-gantry')
+      if(!gantry)return null
+      gantry.updateWorldMatrix(true,true)
+      const part=gantry.children.find(o=>o instanceof Mesh) as Mesh|undefined
+      if(!part)return null
+      const index=part.geometry.index,vertex=new Vector3().fromBufferAttribute(part.geometry.getAttribute('position'),index?.getX(0)??0).applyMatrix4(part.matrixWorld)
+      const sheet=scene.getObjectByName('examination-light-sheet')
+      let assemblies=0;scene.traverse(o=>{if(o.name==='physical-scanner-gantry')assemblies++})
+      return {assemblies,offset:gantry.getWorldPosition(new Vector3()).z,vertex:vertex.toArray(),parts:gantry.children.length,triangles:gantry.children.reduce((sum,o)=>sum+(o instanceof Mesh?(o.geometry.index?.count??0)/3:0),0),sheetZ:sheet?.getWorldPosition(new Vector3()).z??null}
+    }
     probe.checkClearance = positions => {
       const radius=.16, blocked:number[]=[]
       const ray=new Raycaster(new Vector3(),new Vector3(),0,radius)
@@ -68,6 +79,7 @@ export function RuntimeProbe() {
       probe.resourceSnapshot = undefined
       probe.checkClearance = undefined
       probe.patientSnapshot = undefined
+      probe.scannerSnapshot = undefined
       probe.projectPoint = undefined
     }
   }, [gl, scene, camera])

@@ -13,6 +13,7 @@ declare global {
       checkComposite?: () => {samples:number;meanChannelError:number;maxChannelError:number}
       projectPoint?: (point:number[])=>{x:number;y:number}
       patientSnapshot?: () => {visible:boolean;bounds:number[][];meshes:Array<{name:string;bones:number;vertices:number;morph:number}>}|null
+      scannerSnapshot?: () => {assemblies:number;offset:number;vertex:number[];parts:number;triangles:number;sheetZ:number|null}|null
       resourceSnapshot?: () => { geometries: string[]; materials: string[]; textures: string[] }
       checkClearance?: (positions: number[][]) => { blocked: number[]; radius: number }
     }

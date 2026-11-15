@@ -39,6 +39,6 @@ export function releaseBedRestraints(scene: import('three').Object3D) {
   return {
     triangles:pairs.reduce((sum,p)=>sum+(p.stowed.geometry.index?.count??0)/3,0),
     setOccupied(occupied:boolean){for(const p of pairs){p.mesh.geometry=occupied?p.released:p.original;p.stowed.visible=occupied}},
-    dispose(){for(const p of pairs){p.released.dispose();p.stowed.geometry.dispose();p.stowed.removeFromParent()}}
+    dispose(){for(const p of pairs){p.released.dispose();p.stowed.geometry.dispose()}}
   }
 }
