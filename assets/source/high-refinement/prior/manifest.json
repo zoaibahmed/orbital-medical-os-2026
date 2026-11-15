@@ -1,0 +1,74 @@
+[
+  {
+    "id": "shell-low",
+    "path": "assets/models/benchmark/shell-low.glb",
+    "bytes": 1254744,
+    "triangles": 75092,
+    "drawCalls": 16,
+    "sha256": "082f34dcfe9bfa0e3bf8925611d17cc44789f2de300565fa8731d37c071ec5d7",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "examination-low",
+    "path": "assets/models/benchmark/examination-low.glb",
+    "bytes": 732172,
+    "triangles": 51844,
+    "drawCalls": 11,
+    "sha256": "25d1984ba0c484f58cacc3c97bd3c515a658ab061d3beba8cec28be3461e91d9",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "shell-standard",
+    "path": "assets/models/benchmark/shell-standard.glb",
+    "bytes": 4220472,
+    "triangles": 118376,
+    "drawCalls": 16,
+    "sha256": "af79301bbe0af7733c517f03d51811b8c60f34247fbd5e824d7b337adefcdd40",
+    "tier": "standard",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "examination-standard",
+    "path": "assets/models/benchmark/examination-standard.glb",
+    "bytes": 2429600,
+    "triangles": 100108,
+    "drawCalls": 11,
+    "sha256": "7da3ad9d884405bc5f6e9f41ad40f8a0c12d7b25cd9f6e9e784395a53dfa1b54",
+    "tier": "standard",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "equipment-low",
+    "path": "assets/models/benchmark/equipment-low.glb",
+    "bytes": 689100,
+    "triangles": 19736,
+    "drawCalls": 13,
+    "sha256": "e77195b328e6f35028a0435ae52de7693c811a3c28e6be4b43cf6462c5fe94ed",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "equipment-standard",
+    "path": "assets/models/benchmark/equipment-standard.glb",
+    "bytes": 2767676,
+    "triangles": 30120,
+    "drawCalls": 13,
+    "sha256": "1ccc0a1fecc70aec6d1a24749d8da2872082ca6b7d36665f40977f937f09a2e6",
+    "tier": "standard",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "type": 1,
+  "name": "Metal Plate 03",
+  "categories": [
+    "metal",
+    "industrial",
+    "man made",
+    "floor"
+  ],
+  "category": "Metal/Plate & Grating/Diamond & Checker Plate",
+  "attributes": {
+    "surface_use": "floor",
+    "origin": "man_made",
+    "setting": "either",
+    "condition": [
+      "clean"
+    ]
+  },
+  "vault": "upcoming",
+  "tags": [
+    "diamond plate",
+    "checker plate",
+    "tread plate",
+    "embossed steel",
+    "anti-slip surface",
+    "industrial",
+    "iron",
+    "rusty",
+    "steel",
+    "worn"
+  ],
+  "description": "Free 8K metal texture featuring a dark, worn diamond plate surface with raised tread, subtle scratches, and a semi-gloss finish.",
+  "authors": {
+    "Charlotte Baglioni": "All"
+  },
+  "social_post_pending": true,
+  "category_id": "73ed1247-6414-5a28-9bea-f5a74162136a",
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "dimensions": [
+    1889.9999856948853,
+    1889.9999856948853
+  ],
+  "img_version": "b38c1a90",
+  "files_hash": "a6f447feb6b37e6502400f901f26bb3684ab7817",
+  "date_published": 32503680000,
+  "staging": null,
+  "download_count": 20,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/metal_plate_03.png?width=256&height=256&format=webp&v=b38c1a90"
+}

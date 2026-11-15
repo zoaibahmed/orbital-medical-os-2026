@@ -1,0 +1,74 @@
+[
+  {
+    "id": "shell-standard",
+    "path": "assets/models/shell-standard.glb",
+    "bytes": 702636,
+    "triangles": 144848,
+    "drawCalls": 10,
+    "sha256": "fe6b74c1ae53f93b6d89a0eb56d67d2b401b55dc7c79d6fca81097236e96a96b",
+    "tier": "standard",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  },
+  {
+    "id": "examination-standard",
+    "path": "assets/models/examination-standard.glb",
+    "bytes": 366368,
+    "triangles": 35928,
+    "drawCalls": 11,
+    "sha256": "117a32ce5f40cbfa8974b2e0d53486a5066a7417c5edfdf0148e39b6485171a0",
+    "tier": "standard",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  },
+  {
+    "id": "equipment-standard",
+    "path": "assets/models/equipment-standard.glb",
+    "bytes": 285920,
+    "triangles": 18396,
+    "drawCalls": 10,
+    "sha256": "c9bf696c9b851b195c4646af8e424581132cb04ded18362707ff91d02b23b2c6",
+    "tier": "standard",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  },
+  {
+    "id": "shell-low",
+    "path": "assets/models/shell-low.glb",
+    "bytes": 456588,
+    "triangles": 59828,
+    "drawCalls": 10,
+    "sha256": "9f8b0c884cd44f564d071d38174a2e2bd69456d23a09ddca361ab47b8f04e493",
+    "tier": "low",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  },
+  {
+    "id": "examination-low",
+    "path": "assets/models/examination-low.glb",
+    "bytes": 307792,
+    "triangles": 23532,
+    "drawCalls": 10,
+    "sha256": "d6adfbccffc2edb1fdc7ef5c3120f6ee3b67cc186556aa2e9a280aa5af6de978",
+    "tier": "low",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  },
+  {
+    "id": "equipment-low",
+    "path": "assets/models/equipment-low.glb",
+    "bytes": 275928,
+    "triangles": 13020,
+    "drawCalls": 10,
+    "sha256": "60c892eff1eb6716c6dc6fa8fbfa4bde400860df0d116a25fa2daefa0c7d3274",
+    "tier": "low",
+    "authoring": "Original Blender Python mesh authoring; bevels, weighted normals, UV mapping, material batching, embedded procedural textures, Draco compression",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Vertical slice asset; art review pending"
+  }
+]

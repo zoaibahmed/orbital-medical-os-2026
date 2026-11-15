@@ -1,0 +1,74 @@
+[
+  {
+    "id": "shell-low",
+    "path": "assets/models/benchmark/shell-low.glb",
+    "bytes": 1042768,
+    "triangles": 60420,
+    "drawCalls": 9,
+    "sha256": "d93c03d3cfb638c74a06ab4f446d7a7c03042eefaa911c89e397a0bc4df780c7",
+    "tier": "low",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  },
+  {
+    "id": "examination-low",
+    "path": "assets/models/benchmark/examination-low.glb",
+    "bytes": 763144,
+    "triangles": 67688,
+    "drawCalls": 9,
+    "sha256": "ef64250490c6ec0e82b9591affd6ce63ee26fffb6bccd0f5ae9173186ac772f7",
+    "tier": "low",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  },
+  {
+    "id": "equipment-low",
+    "path": "assets/models/benchmark/equipment-low.glb",
+    "bytes": 865232,
+    "triangles": 17304,
+    "drawCalls": 10,
+    "sha256": "2df017c7eca7ca5f71d660865f574fe908202f1d5ef738d68d593468a3eac946",
+    "tier": "low",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  },
+  {
+    "id": "shell-standard",
+    "path": "assets/models/benchmark/shell-standard.glb",
+    "bytes": 1147772,
+    "triangles": 98072,
+    "drawCalls": 9,
+    "sha256": "3be2d985c146a56087878c277cb4a338f5f59468a2fafae2c30ef575cd4aa997",
+    "tier": "standard",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  },
+  {
+    "id": "examination-standard",
+    "path": "assets/models/benchmark/examination-standard.glb",
+    "bytes": 943396,
+    "triangles": 141532,
+    "drawCalls": 9,
+    "sha256": "10e3ebc56f7aa196a94dad90cc9cf3e49126a049d423908f8073ec8820a851d1",
+    "tier": "standard",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  },
+  {
+    "id": "equipment-standard",
+    "path": "assets/models/benchmark/equipment-standard.glb",
+    "bytes": 879796,
+    "triangles": 24856,
+    "drawCalls": 10,
+    "sha256": "0a3547fe76e419c394321ae9f347e40014e151bfaa94b5d9fdb82ad9358e8f11",
+    "tier": "standard",
+    "authoring": "Original profile-lofted chassis, double-curved upholstery grids, segmented gantry wedges, swept conduits, bevels/weighted normals, UVs, embedded tangent normal maps, material batches and Draco; eight-ray hemispherical vertex AO exported as COLOR_0",
+    "license": "Original project geometry/maps; Barlow Condensed glyph outlines under SIL OFL 1.1; no third-party models/images",
+    "status": "Visual benchmark v2 — review required; not production-ready"
+  }
+]

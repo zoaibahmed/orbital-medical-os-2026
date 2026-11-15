@@ -1,0 +1,87 @@
+{
+  "project": "Vitals Orbit",
+  "data_type": "simulated",
+  "clinical_use": false,
+  "rules": [
+    {
+      "id": "FATIGUE-01",
+      "hazard": "Isolation/confinement",
+      "demo_severity": "AMBER",
+      "trigger_description": "For demo: two or more of sleep \u22651.5 h below baseline, resting HR \u226510 bpm above baseline, fatigue \u22657/10 across recent observations.",
+      "explanation": "Multiple fatigue-related indicators have shifted from your usual pattern.",
+      "suggested_action": "Complete fatigue check-in; review schedule and findings with crew medical officer.",
+      "limitation": "Do not label sleep deprivation syndrome or prescribe sleep medication.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "MOOD-01",
+      "hazard": "Isolation/confinement",
+      "demo_severity": "AMBER",
+      "trigger_description": "For demo: mood worsens \u22653 points relative to baseline and high stress persists across 2 check-ins.",
+      "explanation": "Your recent mood and stress check-ins show a change worth reviewing.",
+      "suggested_action": "Offer private check-in, optional support resources and crew medical review.",
+      "limitation": "Do not diagnose depression or automatically share private notes.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "EXERCISE-01",
+      "hazard": "Altered gravity",
+      "demo_severity": "AMBER",
+      "trigger_description": "For demo: 2 planned countermeasure sessions missed in 3 days.",
+      "explanation": "Planned exercise sessions were not recorded as completed.",
+      "suggested_action": "Verify log accuracy and review the individualized exercise plan with crew health staff.",
+      "limitation": "Missed workouts do not quantify bone or muscle loss.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "RAD-01",
+      "hazard": "Radiation",
+      "demo_severity": "AMBER",
+      "trigger_description": "Simulated dose-rate crosses a configurable mission exercise threshold.",
+      "explanation": "The simulated radiation monitor reports an elevated dose rate.",
+      "suggested_action": "Confirm sensor status; notify crew lead and consult approved radiation procedure.",
+      "limitation": "Do not claim a universal NASA dose limit.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "RAD-02",
+      "hazard": "Radiation",
+      "demo_severity": "RED",
+      "trigger_description": "Simulated solar particle event flag from mission environmental system.",
+      "explanation": "A simulated high-radiation event has been reported.",
+      "suggested_action": "Activate mission-approved radiation response protocol and crew notification.",
+      "limitation": "No improvised shielding or medical instructions.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "ENV-01",
+      "hazard": "Hostile/closed environment",
+      "demo_severity": "RED",
+      "trigger_description": "Simulated critical cabin-environment flag from a trusted environmental sensor.",
+      "explanation": "A simulated critical cabin condition requires immediate crew attention.",
+      "suggested_action": "Open approved spacecraft emergency checklist and alert crew lead.",
+      "limitation": "No universal pressure/O2 emergency threshold is asserted.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "VISION-01",
+      "hazard": "Altered gravity / SANS",
+      "demo_severity": "AMBER",
+      "trigger_description": "New vision-change symptom reported on self-check.",
+      "explanation": "You reported a change in vision. A questionnaire cannot determine its cause.",
+      "suggested_action": "Request crew medical evaluation using mission-approved eye assessment process.",
+      "limitation": "Do not diagnose SANS or infer intracranial pressure.",
+      "validated_medical_rule": false
+    },
+    {
+      "id": "DATA-01",
+      "hazard": "All",
+      "demo_severity": "UNKNOWN",
+      "trigger_description": "Required sensor missing, stale, implausible, or insufficient baseline.",
+      "explanation": "There is not enough reliable information to assess this indicator.",
+      "suggested_action": "Verify sensor and enter or obtain a new measurement.",
+      "limitation": "Never interpret missing readings as normal.",
+      "validated_medical_rule": false
+    }
+  ]
+}

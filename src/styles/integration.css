@@ -1,0 +1,14 @@
+/* Team presentation follows the existing operations materials and typography. */
+.team-medical-panel{padding-block:18px;border-bottom:1px solid var(--os-line);min-width:0}
+.team-medical-panel>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.team-measurement{display:grid;gap:4px;padding:12px 0;min-width:0}
+.team-measurement>span,.team-measurement small{color:var(--os-muted);font-size:12px;overflow-wrap:anywhere}
+.team-measurement strong{font-size:25px;font-weight:500;font-variant-numeric:tabular-nums}
+.api-connection{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:9px 0;font-size:12px;color:var(--os-muted)}
+.api-connection[data-status=connected]{color:var(--os-accent)}
+.api-connection[data-status=offline],.api-connection[data-status=error]{color:var(--os-warning)}
+.api-connection button{min-height:40px;text-decoration:underline}
+.team-medical-panel svg{max-width:100%}
+.os-dialog input,.os-dialog fieldset,.os-dialog button,.os-dialog summary{scroll-margin-block:100px}
+.team-medical-panel table{width:100%;font-size:12px;text-align:left}
+.team-medical-panel td,.team-medical-panel th{padding:8px 4px;border-bottom:1px solid var(--os-line)}

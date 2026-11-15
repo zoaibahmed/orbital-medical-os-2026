@@ -1,0 +1,56 @@
+: NASA SPACE APP CHALANGE PROJET RECUIREMENT AND GUID LINES
+1. 3D Holographic Medical Bay (Frontend & Environment)
+Three.js / React Three Fiber Setup: Ek immersive 3D space station medical bay environment render karein jahan user interactive UI ke sath navigate kar sake.
+Holographic UI Panels: Floating 3D holographic screens lagayein jo astronauts ke vitals, health status, aur diagnostic data ko futuristic style mein display karein.
+2. Crew Biometrics & Vitals Real-Time Tracking Module
+Heart Rate & Blood Pressure Monitor: Astronauts ki cardiovascular adaptation aur heart rate variability (HRV) ko track karne ke liye live simulated charts banayein.
+Oxygen Saturation ($SpO_2$) & Hypoxia Warning: Spacewalks ke dauran hypoxia (low oxygen) ke risk ko monitor karne ke liye alert system add karein.
+Sleep & Circadian Rhythm Tracker: Isolation aur irregular schedules ki wajah se sleep loss ko track karne ke liye daily sleep-score logging module banayein.
+3. Space Radiation Monitoring & Risk Dashboard (CANS Integration Inspired)
+Radiation Exposure Visualizer: Galactic Cosmic Rays (GCR) aur Solar Particle Events (SPE) ke levels ko track karne ke liye ek gauge/dashboard banayein (jaise Canadian Space Agency ka CANS neutron spectrometer data represent karta hai).
+Cumulative Dose Calculator: Mission duration ke hisab se astronaut ki cumulative radiation absorption aur cancer/tissue damage risk level calculate karne ki logic likhein.
+4. Physiological & Musculoskeletal Risk Assessment
+Bone Density & Muscle Loss Tracker: Microgravity ki wajah se hone wale bone breakdown aur muscle atrophy ko simulate karne ke liye exercise log (countermeasure tracker) banayein.
+SANS (Spaceflight-Associated Neuro-ocular Syndrome) Checker: Vision changes aur intracranial pressure symptoms ko self-assess karne ke liye ek interactive questionnaire aur diagnostic checklist banayein.
+5. Behavioral & Psychological Health (Isolation & Confinement Countermeasure)
+Mental Well-being Check-in: Lambi isolation ke douran behavioral changes aur psychiatric risks ko monitor karne ke liye daily mood/stress level logging slider banayein.
+Coping & Support Resource Hub: Astronauts ke liye relaxation guides, communication delay management tips, aur automated AI psychological support prompt integrate karein.
+6. Emergency Protocols & AI Diagnostics Assistant
+AI Health Diagnostics Tool: Vitals ya radiation levels threshold cross karne par AI-driven medical recommendations generate karein.
+Emergency Override Protocol: Critical alarms (jaise sudden depressurization, high radiation spike, ya severe crew injury) ke liye ek 1-click Emergency Protocol screen trigger karein jo immediate emergency steps show kare.
+
+ROLES OF TEAM MEMBERS WITH THERE NAME 
+
+ZOHAIB : Frontend Lead & 3D Environment Developer
+ (Core Focus): React, Vite, Tailwind CSS, aur Three.js ke zariye 3D Space Station Medical Bay environment ko setup aur render karna.
+Tasks:
+Three.js / React Three Fiber (R3F) par base 3D canvas aur lighting setup karna.
+Medical bay ka layout aur interactive 3D navigation (camera transitions) banana.
+UI/UX ko Tailwind CSS ke sath responsive aur futuristic holographic style dena.
+FAIZ : UI/UX & Holographic Dashboards Developer
+(Core Focus): Floating 3D holographic UI panels aur real-time data visualization components banana.
+Tasks:
+Vitals, Heart Rate, aur Oxygen ($SpO_2$) ke liye live interactive charts aur gauges design karna.
+SANS (Neuro-ocular syndrome) aur Bone Density risk assessment ke interactive forms/questionnaires banana.
+Dark, space-themed sci-fi UI elements (glowing borders, glassmorphism effects) implement karna.
+SAAD : Backend, State Management & Data Integration Engineer
+(Core Focus): Application ki state management, mock data simulation, aur data flow ko handle karna.
+Tasks:
+React hooks / context ya state management ke zariye real-time vitals simulation logic likhna (jisse live values fluctuate karein).
+Space Radiation (CANS inspired) aur Sleep/Isolation tracking ke calculation algorithms banana.
+Local storage ya mock database integration karna taake user inputs aur health logs save ho sakein.
+FATIMA : Space Health Domain Researcher & Content Specialist
+(Core Focus): NASA HRP (Human Research Program) aur CSA guidelines ke mutabiq scientific accuracy aur content manage karna.
+Tasks:
+5 Hazards (Radiation, Isolation, Gravity, Distance, Closed Environments) aur risks ki exact medical terminology / descriptions content mein add karna.
+AI Diagnostics assistant aur Emergency Protocols ke liye rule-based medical guidelines / text content likhna.
+Presentation, pitch deck, aur README documentation ke liye scientific references compile karna.
+MINAL : QA, Testing, Integration & Pitch Lead
+(Core Focus): Code integration, bug fixing, performance optimization, aur final hackathon submission presentation.
+Tasks:
+Sabhi members ke modules ko GitHub par merge karna aur merge conflicts resolve karna.
+Localhost bugs, responsive layout issues, aur 3D performance (FPS drops) ko test aur fix karna.
+Hackathon ke liye final demo script prepare karna aur submission video/slides design karna.
+
+
+

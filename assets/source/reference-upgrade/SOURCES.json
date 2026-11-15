@@ -1,0 +1,32 @@
+[
+  {
+    "file": "deck-color.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_diff_1k.jpg",
+    "source": "https://polyhaven.com/a/metal_plate_03",
+    "author": "Charlotte Baglioni",
+    "license": "CC0",
+    "bytes": 585917,
+    "md5": "0b6b40f46fb6ac6fc0410df9f0416f1a",
+    "sha256": "4c9474bd147ed0e36736c31b9d1b3c040bb17c4b791ef40156dc809277725cc3"
+  },
+  {
+    "file": "deck-normal.png",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_nor_gl_1k.png",
+    "source": "https://polyhaven.com/a/metal_plate_03",
+    "author": "Charlotte Baglioni",
+    "license": "CC0",
+    "bytes": 5509700,
+    "md5": "4250090dcd2902adbabc0b1220cd2689",
+    "sha256": "009c1c37eae406c1371abb74d9a0fda14e0da128a8a4da0c80b5acee51aab304"
+  },
+  {
+    "file": "deck-roughness.png",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_rough_1k.png",
+    "source": "https://polyhaven.com/a/metal_plate_03",
+    "author": "Charlotte Baglioni",
+    "license": "CC0",
+    "bytes": 2039251,
+    "md5": "55b89733a18c598d7e78ad464cf94508",
+    "sha256": "fc7f86da264303e1f365981eb027b95eb2c53d43a8ee239fece1f82921a76ce3"
+  }
+]

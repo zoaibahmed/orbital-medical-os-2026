@@ -1,0 +1,24 @@
+import {expect,test} from './fixtures'
+import {chapter,ready,settled} from './helpers'
+test('live ECG and crew readings remain synchronized',async({page})=>{
+ await page.goto('/bay/vitals');await ready(page);await settled(page);await expect(page.locator('.ecg polyline')).toHaveAttribute('data-animation','running');const before=await page.locator('.ecg polyline').getAttribute('points');await expect.poll(()=>page.locator('.ecg polyline').getAttribute('points')).not.toBe(before);await expect(page.locator('canvas')).toHaveAttribute('data-monitor-crew','crew-01')
+ await page.getByRole('button',{name:/Crew and display/}).click();await page.getByRole('combobox',{name:'Astronaut'}).selectOption('crew-02');await page.keyboard.press('Escape');await expect(page.getByRole('heading',{name:'Sam Rivera'})).toBeVisible();await expect(page.locator('canvas')).toHaveAttribute('data-monitor-crew','crew-02')
+})
+test('automatic audio unlocks on navigation, reuses one context and follows mute/exit',async({page})=>{
+ await page.addInitScript(()=>{const Native=window.AudioContext;const owner=window as Window&{audioContexts?:AudioContext[]};owner.audioContexts=[];window.AudioContext=class extends Native{constructor(){super();owner.audioContexts!.push(this)}}})
+ await page.goto('/');await ready(page);await chapter(page,'Biometrics');await settled(page);await expect(page.getByTestId('automatic-audio')).toHaveAttribute('data-state','monitoring');await expect(page.getByRole('button',{name:'Enable heartbeat audio'})).toHaveCount(0)
+ await page.evaluate(()=>{Object.defineProperty(document,'visibilityState',{configurable:true,value:'hidden'});document.dispatchEvent(new Event('visibilitychange'))});await expect(page.getByTestId('automatic-audio')).toHaveAttribute('data-state','standby');await page.evaluate(()=>{Object.defineProperty(document,'visibilityState',{configurable:true,value:'visible'});document.dispatchEvent(new Event('visibilitychange'))});
+ await chapter(page,'Explore');await settled(page);await expect.poll(()=>page.evaluate(()=>((window as Window&{audioContexts?:AudioContext[]}).audioContexts??[]).map(a=>a.state))).toEqual(['suspended'])
+ await chapter(page,'Biometrics');await settled(page);expect(await page.evaluate(()=>((window as Window&{audioContexts?:AudioContext[]}).audioContexts??[]).length)).toBe(1)
+ await page.getByRole('button',{name:/Crew and display/}).click();await page.getByLabel('Allow monitoring sound after interaction').uncheck();await page.keyboard.press('Escape');await expect(page.getByTestId('automatic-audio')).toHaveAttribute('data-state','muted')
+})
+test('reduced motion and mobile medical access remain available',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/bay/vitals');await expect(page.locator('canvas')).toHaveCount(0);await expect(page.locator('.ecg polyline')).toHaveAttribute('data-animation','static');await page.getByRole('button',{name:'Inspect trace',exact:true}).click();await expect(page.getByRole('button',{name:'Full trace'})).toHaveAttribute('aria-pressed','true')
+})
+
+test('saved sound refusal survives reload without creating an audio context',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/bay/vitals');await page.getByRole('button',{name:/Crew and display/}).click();await page.getByLabel('Allow monitoring sound after interaction').uncheck();await page.reload();await expect(page.getByTestId('automatic-audio')).toHaveAttribute('data-state','muted');await page.getByRole('button',{name:/Crew and display/}).click();await expect(page.getByLabel('Allow monitoring sound after interaction')).not.toBeChecked()
+})
+
+test('scrolling away from a medical interface restores the live monitoring chapter',async({page})=>{await page.setViewportSize({width:390,height:844});await page.goto('/bay/radiation?crew=crew-02');await expect(page.getByRole('heading',{name:'Space radiation monitoring'})).toBeVisible();await page.keyboard.press('Escape');await page.evaluate(()=>scrollTo(0,innerHeight*2));await expect(page).toHaveURL(/bay\/vitals/);await expect(page.locator('.ecg polyline')).toHaveAttribute('data-animation','running')})
+test('mid-travel context loss recovers monitoring',async({page})=>{await page.goto('/bay/overview');await ready(page);await settled(page);await chapter(page,'Biometrics');await expect(page.locator('canvas')).toHaveAttribute('data-camera-transition','moving');await page.locator('canvas').evaluate(c=>(c as HTMLCanvasElement).getContext('webgl2')!.getExtension('WEBGL_lose_context')!.loseContext());await expect(page.getByTestId('environment-status')).toHaveAttribute('data-state','fallback');await page.getByRole('button',{name:'Retry 3D view'}).first().click();await ready(page);await settled(page);await expect(page.locator('canvas')).toHaveAttribute('data-monitor-state','active')})

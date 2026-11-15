@@ -1,0 +1,74 @@
+[
+  {
+    "id": "shell-low",
+    "path": "assets/models/benchmark/shell-low.glb",
+    "bytes": 1254704,
+    "triangles": 75092,
+    "drawCalls": 16,
+    "sha256": "c9a3f6300c7a2be5325eac9cc9c1204ff6a2b4c38679afd002e006654b51dac1",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "examination-low",
+    "path": "assets/models/benchmark/examination-low.glb",
+    "bytes": 732172,
+    "triangles": 51844,
+    "drawCalls": 11,
+    "sha256": "25d1984ba0c484f58cacc3c97bd3c515a658ab061d3beba8cec28be3461e91d9",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "equipment-low",
+    "path": "assets/models/benchmark/equipment-low.glb",
+    "bytes": 689100,
+    "triangles": 19736,
+    "drawCalls": 13,
+    "sha256": "e77195b328e6f35028a0435ae52de7693c811a3c28e6be4b43cf6462c5fe94ed",
+    "tier": "low",
+    "authoring": "Reference-led independent profile/swept mesh authoring; deep gantry sectors, linked support hardware, physically connected service details; UVs, eight-ray vertex AO, embedded PBR, material batching, Draco",
+    "license": "Original project geometry and authored maps; Poly Haven metal_plate_03 PBR maps CC0; Barlow Condensed glyphs SIL OFL 1.1. Supplied reference image is not used as runtime art.",
+    "status": "Reference-driven revision — visual approval pending"
+  },
+  {
+    "id": "shell-standard",
+    "path": "assets/models/benchmark/shell-standard.glb",
+    "bytes": 4920508,
+    "triangles": 150796,
+    "drawCalls": 20,
+    "sha256": "dc25b5940686af571006c8ca52d1a259f38f22366c9fa3a326ba703a7dd52e75",
+    "tier": "standard",
+    "authoring": "High refinement: independent layered hard-surface geometry, inclined cushions, ribbon restraints, pantograph mechanisms, optical gantry components, true viewport aperture and external Earth sphere; UVs, cavity vertex bake, static caster shadows, Draco",
+    "license": "Original project geometry/maps; Poly Haven metal_plate_03 CC0; Barlow Condensed SIL OFL 1.1; NASA Earth Observatory globe imagery with attribution, subject to NASA Media Usage Guidelines. Reference is documentation only.",
+    "status": "High-only public refinement; art review pending"
+  },
+  {
+    "id": "examination-standard",
+    "path": "assets/models/benchmark/examination-standard.glb",
+    "bytes": 2667644,
+    "triangles": 154476,
+    "drawCalls": 13,
+    "sha256": "ed6e77e87f6d3f8df55cdadcd61e7cf95fa4c5dfcf62984d7b9e2e7da7f226ca",
+    "tier": "standard",
+    "authoring": "High refinement: independent layered hard-surface geometry, inclined cushions, ribbon restraints, pantograph mechanisms, optical gantry components, true viewport aperture and external Earth sphere; UVs, cavity vertex bake, static caster shadows, Draco",
+    "license": "Original project geometry/maps; Poly Haven metal_plate_03 CC0; Barlow Condensed SIL OFL 1.1; NASA Earth Observatory globe imagery with attribution, subject to NASA Media Usage Guidelines. Reference is documentation only.",
+    "status": "High-only public refinement; art review pending"
+  },
+  {
+    "id": "equipment-standard",
+    "path": "assets/models/benchmark/equipment-standard.glb",
+    "bytes": 2901504,
+    "triangles": 55576,
+    "drawCalls": 16,
+    "sha256": "8b309cc92f9c893170e25ea60fb6006905dd6b28c4b8b571fdb73925eb099970",
+    "tier": "standard",
+    "authoring": "High refinement: independent layered hard-surface geometry, inclined cushions, ribbon restraints, pantograph mechanisms, optical gantry components, true viewport aperture and external Earth sphere; UVs, cavity vertex bake, static caster shadows, Draco",
+    "license": "Original project geometry/maps; Poly Haven metal_plate_03 CC0; Barlow Condensed SIL OFL 1.1; NASA Earth Observatory globe imagery with attribution, subject to NASA Media Usage Guidelines. Reference is documentation only.",
+    "status": "High-only public refinement; art review pending"
+  }
+]

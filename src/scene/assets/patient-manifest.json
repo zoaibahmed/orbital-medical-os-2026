@@ -1,0 +1,34 @@
+{
+  "id": "patient-examination",
+  "path": "assets/models/patient/patient-examination.glb",
+  "version": "ee1f3f00a5a6",
+  "sha256": "ee1f3f00a5a6fffb21e9a88d94aa9a11973b76e200135ef270ca0ff2c1328e8e",
+  "bytes": 4892812,
+  "station": "physical",
+  "tier": "standard",
+  "triangles": 42610,
+  "bones": 163,
+  "license": {
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+    "author": "MakeHuman contributors / Data Collection AB / Joel Palmius / Jonas Hauquier",
+    "name": "CC0",
+    "attribution": "Official CC0 MakeHuman core, rig, eyes, skin, casualsuit01, short01 and eyebrow001. See public/assets/licenses/MAKEHUMAN-PATIENT-CC0.md."
+  },
+  "animations": [
+    "Respiration / localized chest morph"
+  ],
+  "boundsThree": [
+    [
+      -0.6959633827209473,
+      -0.11140050739049911
+    ],
+    [
+      1.0620872974395752,
+      1.6081831455230713
+    ],
+    [
+      -1.1584815979003906,
+      0.6153708100318909
+    ]
+  ]
+}

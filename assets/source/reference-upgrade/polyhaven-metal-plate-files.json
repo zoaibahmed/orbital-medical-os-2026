@@ -1,0 +1,956 @@
+{
+  "blend": {
+    "1k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/1k/metal_plate_03/metal_plate_03_1k.blend",
+        "md5": "74287b3f6f5fbda3fcd7c004f5e567a3",
+        "size": 212676,
+        "include": {
+          "textures/metal_plate_03_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_diff_1k.jpg",
+            "md5": "0b6b40f46fb6ac6fc0410df9f0416f1a",
+            "size": 585917
+          },
+          "textures/metal_plate_03_disp_1k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_disp_1k.png",
+            "md5": "b832530913f41dabf4373a3bd11da063",
+            "size": 1763221
+          },
+          "textures/metal_plate_03_metal_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_metal_1k.exr",
+            "md5": "9b0d94c525a6ba36d15673474e579308",
+            "size": 1010085
+          },
+          "textures/metal_plate_03_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_nor_gl_1k.exr",
+            "md5": "a4935fb47292fa918c5999ec8c4461f2",
+            "size": 1960500
+          },
+          "textures/metal_plate_03_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_rough_1k.exr",
+            "md5": "eb1e7bb946aed078249d958cad5e5862",
+            "size": 1042763
+          }
+        }
+      }
+    },
+    "2k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/2k/metal_plate_03/metal_plate_03_2k.blend",
+        "md5": "85418c74f5a6b4969759b3f85f74a14a",
+        "size": 212674,
+        "include": {
+          "textures/metal_plate_03_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_diff_2k.jpg",
+            "md5": "42120cf40d1e3ba98886da5d58aa0a94",
+            "size": 2356899
+          },
+          "textures/metal_plate_03_disp_2k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_disp_2k.png",
+            "md5": "d9d507fea400b985c6668016b181ebc9",
+            "size": 6782232
+          },
+          "textures/metal_plate_03_metal_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_metal_2k.exr",
+            "md5": "bb81951ac7bdcca2f030739a71fbf4f2",
+            "size": 4021235
+          },
+          "textures/metal_plate_03_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_nor_gl_2k.exr",
+            "md5": "bd7a4f52f9b4de784f2c82d3a0852d16",
+            "size": 7620633
+          },
+          "textures/metal_plate_03_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_rough_2k.exr",
+            "md5": "a553702da129b2ffa349ad5c33e585a7",
+            "size": 3935339
+          }
+        }
+      }
+    },
+    "4k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/4k/metal_plate_03/metal_plate_03_4k.blend",
+        "md5": "daae834f116c1924cef1b3619d27dfa6",
+        "size": 212676,
+        "include": {
+          "textures/metal_plate_03_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_diff_4k.jpg",
+            "md5": "cb39bea7a836ba59f8a3d7444a2b87eb",
+            "size": 8693138
+          },
+          "textures/metal_plate_03_disp_4k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_disp_4k.png",
+            "md5": "88bea296e1d934454b37a15096b08832",
+            "size": 26147378
+          },
+          "textures/metal_plate_03_metal_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_metal_4k.exr",
+            "md5": "47eedd862e5bd203002f24ed5c438afe",
+            "size": 15529801
+          },
+          "textures/metal_plate_03_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_nor_gl_4k.exr",
+            "md5": "5eb008e5e4c04f88635188262b176ff6",
+            "size": 30734865
+          },
+          "textures/metal_plate_03_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_rough_4k.exr",
+            "md5": "ce0f2121e3bc1af25e53882cdf219a34",
+            "size": 14396975
+          }
+        }
+      }
+    },
+    "8k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/8k/metal_plate_03/metal_plate_03_8k.blend",
+        "md5": "57a75f027436a341da7f778c2417fcc9",
+        "size": 212676,
+        "include": {
+          "textures/metal_plate_03_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_diff_8k.jpg",
+            "md5": "3fbe61950cc3af9c3ed5c5cab3d47b42",
+            "size": 28361753
+          },
+          "textures/metal_plate_03_disp_8k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_disp_8k.png",
+            "md5": "be66276395a02d137109b2fa8fe72edd",
+            "size": 97946726
+          },
+          "textures/metal_plate_03_metal_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_metal_8k.exr",
+            "md5": "8d7fd17a5fe0f61b5aad3d5017fb0b3c",
+            "size": 53186053
+          },
+          "textures/metal_plate_03_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_nor_gl_8k.exr",
+            "md5": "32648df6a96ad87aef2caeb78d0d2b9b",
+            "size": 115983860
+          },
+          "textures/metal_plate_03_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_rough_8k.exr",
+            "md5": "37fee30121bfee16b990e2b083d22625",
+            "size": 46844918
+          }
+        }
+      }
+    }
+  },
+  "AO": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_ao_1k.exr",
+        "md5": "c0eb93748234c215609ee653bb342132",
+        "size": 727059
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_ao_1k.jpg",
+        "md5": "3c113a4d27960eb2c6952831eab7769d",
+        "size": 731793
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_ao_1k.png",
+        "md5": "15c4fe5192574f4450c043ce7f939264",
+        "size": 1890594
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_ao_2k.exr",
+        "md5": "d4ba6bf1439f7faa7b8ce41f0a182ab8",
+        "size": 2710276
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_ao_2k.jpg",
+        "md5": "7a834262208025e01d9778cca0bc7f9e",
+        "size": 2768773
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_ao_2k.png",
+        "md5": "45b7b756bbe3e20212ab19939cf3accb",
+        "size": 7434306
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_ao_4k.exr",
+        "md5": "f4a6f81d0d65f58889599ee4fa9d317b",
+        "size": 10395463
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_ao_4k.jpg",
+        "md5": "b098add974dda1cf3f70e92e0422e71c",
+        "size": 10727177
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_ao_4k.png",
+        "md5": "8068afa334549406754a38fd5e8269f6",
+        "size": 29517695
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_ao_8k.exr",
+        "md5": "7064eb7b180bcdf979c0dd753a20d268",
+        "size": 40737656
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_ao_8k.jpg",
+        "md5": "c3ccfc157ce940f0aa16c541776dfda0",
+        "size": 42533855
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_ao_8k.png",
+        "md5": "5653b4994c85e4812c61dd7f7cc74e55",
+        "size": 116689538
+      }
+    }
+  },
+  "arm": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_arm_1k.exr",
+        "md5": "ba86aaf551acbc69a1d4868a11b89dae",
+        "size": 2671802
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_arm_1k.jpg",
+        "md5": "4049c2999d173d14302521dbb7074748",
+        "size": 1344813
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_arm_1k.png",
+        "md5": "e9460e326db5babdbbab2f2bee9cb0b6",
+        "size": 5965531
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_arm_2k.exr",
+        "md5": "b149044a364d3c6130b3655a03b423b7",
+        "size": 10391583
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_arm_2k.jpg",
+        "md5": "3aed478a94a134e9c486eb9c8a97f3b8",
+        "size": 5196767
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_arm_2k.png",
+        "md5": "2b7811bcea996e24af63cb84f4429d5f",
+        "size": 23341001
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_arm_4k.exr",
+        "md5": "3370af6b60349132c5659448c1f1678f",
+        "size": 39290621
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_arm_4k.jpg",
+        "md5": "2ce075f47dd5517bf194f8bce8620013",
+        "size": 19144110
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_arm_4k.png",
+        "md5": "6bcc8079aa067114a90cd89b76d9be02",
+        "size": 89909623
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_arm_8k.exr",
+        "md5": "53e2394b140b071278c4a7bb2dd4e4ee",
+        "size": 136749587
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_arm_8k.jpg",
+        "md5": "80ec08ac17a661130b06207882f826e8",
+        "size": 66586575
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_arm_8k.png",
+        "md5": "86345d6481f9586dd789121144062770",
+        "size": 327044584
+      }
+    }
+  },
+  "Diffuse": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_diff_1k.exr",
+        "md5": "b875c2d9c33aabc2ac90cffd7a1ed121",
+        "size": 1482487
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_diff_1k.jpg",
+        "md5": "0b6b40f46fb6ac6fc0410df9f0416f1a",
+        "size": 585917
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_diff_1k.png",
+        "md5": "7e641c5bcd745bb69fe3b8511ad462b0",
+        "size": 5286565
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_diff_2k.exr",
+        "md5": "5ea21e62f9595abe4f6101cf039326c3",
+        "size": 5543540
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_diff_2k.jpg",
+        "md5": "42120cf40d1e3ba98886da5d58aa0a94",
+        "size": 2356899
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_diff_2k.png",
+        "md5": "10b6a8a6d98a9b633063d53784e77669",
+        "size": 20982913
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_diff_4k.exr",
+        "md5": "1bf45e747e415cb2b7d03228b39b8438",
+        "size": 19247784
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_diff_4k.jpg",
+        "md5": "cb39bea7a836ba59f8a3d7444a2b87eb",
+        "size": 8693138
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_diff_4k.png",
+        "md5": "9076bc89db5c97545facda401862ca36",
+        "size": 82311651
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_diff_8k.exr",
+        "md5": "58fe185a1f3eb28b65f497cf70c96c5f",
+        "size": 56921649
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_diff_8k.jpg",
+        "md5": "3fbe61950cc3af9c3ed5c5cab3d47b42",
+        "size": 28361753
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_diff_8k.png",
+        "md5": "c3553dda86f0a1fbe2b62ceb15df0440",
+        "size": 313197292
+      }
+    }
+  },
+  "Displacement": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_disp_1k.exr",
+        "md5": "c33b16badded7608bba1a6d72b4f255b",
+        "size": 563830
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_disp_1k.jpg",
+        "md5": "9aa5a3f7d6ab4f69b524459b766f3a8e",
+        "size": 513031
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_disp_1k.png",
+        "md5": "b832530913f41dabf4373a3bd11da063",
+        "size": 1763221
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_disp_2k.exr",
+        "md5": "63b541b610cc1842b49ce899a5582ba3",
+        "size": 1663067
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_disp_2k.jpg",
+        "md5": "3c180862b9f257a74ef082f9fdf2efdd",
+        "size": 1550149
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_disp_2k.png",
+        "md5": "d9d507fea400b985c6668016b181ebc9",
+        "size": 6782232
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_disp_4k.exr",
+        "md5": "1111a2f7b7743c40325b88cc0b04c1d8",
+        "size": 4797177
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_disp_4k.jpg",
+        "md5": "0942aaed79516c3c8768c0befee8a546",
+        "size": 4763431
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_disp_4k.png",
+        "md5": "88bea296e1d934454b37a15096b08832",
+        "size": 26147378
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_disp_8k.exr",
+        "md5": "0dd7c9cf4c214800ce2523408caa7967",
+        "size": 14825021
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_disp_8k.jpg",
+        "md5": "c1ed42946fa3a80da364f80af5011b92",
+        "size": 15612801
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_disp_8k.png",
+        "md5": "be66276395a02d137109b2fa8fe72edd",
+        "size": 97946726
+      }
+    }
+  },
+  "Metal": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_metal_1k.exr",
+        "md5": "9b0d94c525a6ba36d15673474e579308",
+        "size": 1010085
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_metal_1k.jpg",
+        "md5": "27eaed05e68cb280b6401332c8a4874e",
+        "size": 1120752
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_metal_1k.png",
+        "md5": "52257bc8783a765e7cd401740dcdfe50",
+        "size": 2002109
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_metal_2k.exr",
+        "md5": "bb81951ac7bdcca2f030739a71fbf4f2",
+        "size": 4021235
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_metal_2k.jpg",
+        "md5": "c68d214c6acc579b4daeb86cb79d89bc",
+        "size": 4470634
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_metal_2k.png",
+        "md5": "304dd04998aea130d7413c4a34c2df8c",
+        "size": 7225585
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_metal_4k.exr",
+        "md5": "47eedd862e5bd203002f24ed5c438afe",
+        "size": 15529801
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_metal_4k.jpg",
+        "md5": "9040c9162e0f04dc6e257dc07b954f89",
+        "size": 17118657
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_metal_4k.png",
+        "md5": "2ae7b47433aab56159fff837cb47e791",
+        "size": 24218757
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_metal_8k.exr",
+        "md5": "8d7fd17a5fe0f61b5aad3d5017fb0b3c",
+        "size": 53186053
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_metal_8k.jpg",
+        "md5": "36cc741979d403bd76d766ed4c2bf456",
+        "size": 56813148
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_metal_8k.png",
+        "md5": "5920c37f8335f03321e81fe93367233c",
+        "size": 71180641
+      }
+    }
+  },
+  "nor_dx": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_nor_dx_1k.exr",
+        "md5": "67ca1b0abbde2cdb182a312d735db026",
+        "size": 1957474
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_nor_dx_1k.jpg",
+        "md5": "4277e4acccb39e7b7105b4228a7ad77b",
+        "size": 891325
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_nor_dx_1k.png",
+        "md5": "c587a9643ab0372319406d944dd2d429",
+        "size": 5504046
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_nor_dx_2k.exr",
+        "md5": "5db33a265d42b8482d291062617c2cf2",
+        "size": 7624092
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_nor_dx_2k.jpg",
+        "md5": "91b3ad299cdf32dac073c25e127a794f",
+        "size": 3473740
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_nor_dx_2k.png",
+        "md5": "032c29dafa1771a7b20785f0df90a3c4",
+        "size": 21990900
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_nor_dx_4k.exr",
+        "md5": "7bed5597c8834cdb9695418421839b80",
+        "size": 30770036
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_nor_dx_4k.jpg",
+        "md5": "d342206d5e0433c50546b2eb52474572",
+        "size": 14150816
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_nor_dx_4k.png",
+        "md5": "e9ec93bfb85a957c50a09ddfc91aed14",
+        "size": 88313160
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_nor_dx_8k.exr",
+        "md5": "b634f0ab310fd33c5fc5230a3ec85749",
+        "size": 116405678
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_nor_dx_8k.jpg",
+        "md5": "f057476671229475ee0ea17195aeed2c",
+        "size": 56467396
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_nor_dx_8k.png",
+        "md5": "be6491d811270d1fdb3b6a72d360662b",
+        "size": 343734516
+      }
+    }
+  },
+  "nor_gl": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_nor_gl_1k.exr",
+        "md5": "a4935fb47292fa918c5999ec8c4461f2",
+        "size": 1960500
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_nor_gl_1k.jpg",
+        "md5": "69bba919e62b592d6e149c6291aa0829",
+        "size": 889768
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_nor_gl_1k.png",
+        "md5": "4250090dcd2902adbabc0b1220cd2689",
+        "size": 5509700
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_nor_gl_2k.exr",
+        "md5": "bd7a4f52f9b4de784f2c82d3a0852d16",
+        "size": 7620633
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_nor_gl_2k.jpg",
+        "md5": "26ca51a594213487d211ef1e7ef6ddd1",
+        "size": 3474199
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_nor_gl_2k.png",
+        "md5": "18a99eacfda70e47bce437dff05481a2",
+        "size": 21993184
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_nor_gl_4k.exr",
+        "md5": "5eb008e5e4c04f88635188262b176ff6",
+        "size": 30734865
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_nor_gl_4k.jpg",
+        "md5": "c70a7deb63c70a1b327593513abdc87f",
+        "size": 13937391
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_nor_gl_4k.png",
+        "md5": "0957b961d7acf52e7d836d9e83b97af7",
+        "size": 88314800
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_nor_gl_8k.exr",
+        "md5": "32648df6a96ad87aef2caeb78d0d2b9b",
+        "size": 115983860
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_nor_gl_8k.jpg",
+        "md5": "5caa6153c0de21c618b608f72ab7642f",
+        "size": 53389322
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_nor_gl_8k.png",
+        "md5": "9c12c00eff3bf5084036544e1daa789f",
+        "size": 345025408
+      }
+    }
+  },
+  "Rough": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_rough_1k.exr",
+        "md5": "eb1e7bb946aed078249d958cad5e5862",
+        "size": 1042763
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_rough_1k.jpg",
+        "md5": "81518996511864c61a0fdd5e0f31b476",
+        "size": 1135735
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_rough_1k.png",
+        "md5": "55b89733a18c598d7e78ad464cf94508",
+        "size": 2039251
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_rough_2k.exr",
+        "md5": "a553702da129b2ffa349ad5c33e585a7",
+        "size": 3935339
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_rough_2k.jpg",
+        "md5": "cf0ba22aa37f2820a69294d1733b4da4",
+        "size": 4358395
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_rough_2k.png",
+        "md5": "f5bdc030f4faa2bdee90e45a729f7eb7",
+        "size": 8059425
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_rough_4k.exr",
+        "md5": "ce0f2121e3bc1af25e53882cdf219a34",
+        "size": 14396975
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_rough_4k.jpg",
+        "md5": "b76f111211d66cbc2242056fc10fb161",
+        "size": 15622681
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_rough_4k.png",
+        "md5": "51d7914f68b8380bf727509f7ed0a943",
+        "size": 31549305
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_rough_8k.exr",
+        "md5": "37fee30121bfee16b990e2b083d22625",
+        "size": 46844918
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_rough_8k.jpg",
+        "md5": "e2d8d83a1dcdf5394f256d950c2e0deb",
+        "size": 48840503
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_rough_8k.png",
+        "md5": "af4449801ed23314c2a70506bcb0c3a2",
+        "size": 118926962
+      }
+    }
+  },
+  "gltf": {
+    "1k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/1k/metal_plate_03/metal_plate_03_1k.gltf",
+        "md5": "6a58269161e0b7aba5cb65e35b3e1143",
+        "size": 2787,
+        "include": {
+          "textures/metal_plate_03_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_nor_gl_1k.jpg",
+            "md5": "69bba919e62b592d6e149c6291aa0829",
+            "size": 889768
+          },
+          "textures/metal_plate_03_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_diff_1k.jpg",
+            "md5": "0b6b40f46fb6ac6fc0410df9f0416f1a",
+            "size": 585917
+          },
+          "textures/metal_plate_03_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_arm_1k.jpg",
+            "md5": "4049c2999d173d14302521dbb7074748",
+            "size": 1344813
+          },
+          "metal_plate_03.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/metal_plate_03/metal_plate_03.bin",
+            "md5": "5e5915880dd8280140da223682e5e5d3",
+            "size": 2370100
+          }
+        }
+      }
+    },
+    "2k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/2k/metal_plate_03/metal_plate_03_2k.gltf",
+        "md5": "398b11f6b49f43b6722374f4a85d7e73",
+        "size": 2787,
+        "include": {
+          "textures/metal_plate_03_nor_gl_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_nor_gl_2k.jpg",
+            "md5": "26ca51a594213487d211ef1e7ef6ddd1",
+            "size": 3474199
+          },
+          "textures/metal_plate_03_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_diff_2k.jpg",
+            "md5": "42120cf40d1e3ba98886da5d58aa0a94",
+            "size": 2356899
+          },
+          "textures/metal_plate_03_arm_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_arm_2k.jpg",
+            "md5": "3aed478a94a134e9c486eb9c8a97f3b8",
+            "size": 5196767
+          },
+          "metal_plate_03.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/metal_plate_03/metal_plate_03.bin",
+            "md5": "5e5915880dd8280140da223682e5e5d3",
+            "size": 2370100
+          }
+        }
+      }
+    },
+    "4k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/4k/metal_plate_03/metal_plate_03_4k.gltf",
+        "md5": "8a52d26844fe40aaa267533096f48327",
+        "size": 2787,
+        "include": {
+          "textures/metal_plate_03_nor_gl_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_nor_gl_4k.jpg",
+            "md5": "c70a7deb63c70a1b327593513abdc87f",
+            "size": 13937391
+          },
+          "textures/metal_plate_03_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_diff_4k.jpg",
+            "md5": "cb39bea7a836ba59f8a3d7444a2b87eb",
+            "size": 8693138
+          },
+          "textures/metal_plate_03_arm_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_arm_4k.jpg",
+            "md5": "2ce075f47dd5517bf194f8bce8620013",
+            "size": 19144110
+          },
+          "metal_plate_03.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/metal_plate_03/metal_plate_03.bin",
+            "md5": "5e5915880dd8280140da223682e5e5d3",
+            "size": 2370100
+          }
+        }
+      }
+    },
+    "8k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/metal_plate_03/metal_plate_03_8k.gltf",
+        "md5": "a6f4322cb8b2ef812234ec37567a7f16",
+        "size": 2787,
+        "include": {
+          "textures/metal_plate_03_nor_gl_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_nor_gl_8k.jpg",
+            "md5": "5caa6153c0de21c618b608f72ab7642f",
+            "size": 53389322
+          },
+          "textures/metal_plate_03_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_diff_8k.jpg",
+            "md5": "3fbe61950cc3af9c3ed5c5cab3d47b42",
+            "size": 28361753
+          },
+          "textures/metal_plate_03_arm_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_arm_8k.jpg",
+            "md5": "80ec08ac17a661130b06207882f826e8",
+            "size": 66586575
+          },
+          "metal_plate_03.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/metal_plate_03/metal_plate_03.bin",
+            "md5": "5e5915880dd8280140da223682e5e5d3",
+            "size": 2370100
+          }
+        }
+      }
+    }
+  },
+  "mtlx": {
+    "1k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/1k/metal_plate_03/metal_plate_03_1k.mtlx",
+        "md5": "b136356e17c37e1a5d48ff8cac0c6923",
+        "size": 5036,
+        "include": {
+          "textures/metal_plate_03_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_03/metal_plate_03_diff_1k.jpg",
+            "md5": "0b6b40f46fb6ac6fc0410df9f0416f1a",
+            "size": 585917
+          },
+          "textures/metal_plate_03_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_rough_1k.exr",
+            "md5": "eb1e7bb946aed078249d958cad5e5862",
+            "size": 1042763
+          },
+          "textures/metal_plate_03_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_nor_gl_1k.exr",
+            "md5": "a4935fb47292fa918c5999ec8c4461f2",
+            "size": 1960500
+          },
+          "textures/metal_plate_03_metal_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/metal_plate_03/metal_plate_03_metal_1k.exr",
+            "md5": "9b0d94c525a6ba36d15673474e579308",
+            "size": 1010085
+          },
+          "textures/metal_plate_03_disp_1k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/metal_plate_03/metal_plate_03_disp_1k.png",
+            "md5": "b832530913f41dabf4373a3bd11da063",
+            "size": 1763221
+          }
+        }
+      }
+    },
+    "2k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/2k/metal_plate_03/metal_plate_03_2k.mtlx",
+        "md5": "ef4cf7c03bfad9a7af0ebe51d9332eaf",
+        "size": 5036,
+        "include": {
+          "textures/metal_plate_03_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/metal_plate_03/metal_plate_03_diff_2k.jpg",
+            "md5": "42120cf40d1e3ba98886da5d58aa0a94",
+            "size": 2356899
+          },
+          "textures/metal_plate_03_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_rough_2k.exr",
+            "md5": "a553702da129b2ffa349ad5c33e585a7",
+            "size": 3935339
+          },
+          "textures/metal_plate_03_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_nor_gl_2k.exr",
+            "md5": "bd7a4f52f9b4de784f2c82d3a0852d16",
+            "size": 7620633
+          },
+          "textures/metal_plate_03_metal_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/metal_plate_03/metal_plate_03_metal_2k.exr",
+            "md5": "bb81951ac7bdcca2f030739a71fbf4f2",
+            "size": 4021235
+          },
+          "textures/metal_plate_03_disp_2k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/metal_plate_03/metal_plate_03_disp_2k.png",
+            "md5": "d9d507fea400b985c6668016b181ebc9",
+            "size": 6782232
+          }
+        }
+      }
+    },
+    "4k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/4k/metal_plate_03/metal_plate_03_4k.mtlx",
+        "md5": "4c0297ef5d809d4e31977bf91117906c",
+        "size": 5036,
+        "include": {
+          "textures/metal_plate_03_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_03/metal_plate_03_diff_4k.jpg",
+            "md5": "cb39bea7a836ba59f8a3d7444a2b87eb",
+            "size": 8693138
+          },
+          "textures/metal_plate_03_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_rough_4k.exr",
+            "md5": "ce0f2121e3bc1af25e53882cdf219a34",
+            "size": 14396975
+          },
+          "textures/metal_plate_03_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_nor_gl_4k.exr",
+            "md5": "5eb008e5e4c04f88635188262b176ff6",
+            "size": 30734865
+          },
+          "textures/metal_plate_03_metal_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/metal_plate_03/metal_plate_03_metal_4k.exr",
+            "md5": "47eedd862e5bd203002f24ed5c438afe",
+            "size": 15529801
+          },
+          "textures/metal_plate_03_disp_4k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/metal_plate_03/metal_plate_03_disp_4k.png",
+            "md5": "88bea296e1d934454b37a15096b08832",
+            "size": 26147378
+          }
+        }
+      }
+    },
+    "8k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/8k/metal_plate_03/metal_plate_03_8k.mtlx",
+        "md5": "cc8e325ed185107b2490d7c8f634352d",
+        "size": 5036,
+        "include": {
+          "textures/metal_plate_03_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/metal_plate_03/metal_plate_03_diff_8k.jpg",
+            "md5": "3fbe61950cc3af9c3ed5c5cab3d47b42",
+            "size": 28361753
+          },
+          "textures/metal_plate_03_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_rough_8k.exr",
+            "md5": "37fee30121bfee16b990e2b083d22625",
+            "size": 46844918
+          },
+          "textures/metal_plate_03_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_nor_gl_8k.exr",
+            "md5": "32648df6a96ad87aef2caeb78d0d2b9b",
+            "size": 115983860
+          },
+          "textures/metal_plate_03_metal_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/metal_plate_03/metal_plate_03_metal_8k.exr",
+            "md5": "8d7fd17a5fe0f61b5aad3d5017fb0b3c",
+            "size": 53186053
+          },
+          "textures/metal_plate_03_disp_8k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/metal_plate_03/metal_plate_03_disp_8k.png",
+            "md5": "be66276395a02d137109b2fa8fe72edd",
+            "size": 97946726
+          }
+        }
+      }
+    }
+  }
+}

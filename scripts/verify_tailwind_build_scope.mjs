@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from'node:child_process';
+const cssFile='src/styles/os.css';const scoped=fs.readFileSync(cssFile,'utf8');const automatic=scoped.replace("@import 'tailwindcss' source(none);\n@source '../';\n@source '../../index.html';", "@import 'tailwindcss';");if(automatic===scoped)throw Error('Expected scoped stylesheet');const value=13907;fs.copyFileSync('docs/reviews/correction/tailwind-scope-verification.json','docs/reviews/correction/tailwind-incremental-observation.json');fs.writeFileSync('docs/reviews/correction/tailwind-sentinel.txt','p-['+value+'px]\n');const results=[];
+try{
+ for(const[mode,source]of[['automatic',automatic],['explicit',scoped]]){
+  fs.writeFileSync(cssFile,source);const out=path.resolve('.tools','tailwind-scan-'+mode+'-'+Date.now());if(!out.startsWith(path.resolve('.tools')+path.sep)||fs.existsSync(out))throw Error('Unsafe control output');
+  const r=spawnSync(process.execPath,['node_modules/vite/bin/vite.js','build','--outDir',out],{encoding:'utf8'});if(r.status)throw Error(r.stderr||r.stdout);const file=fs.readdirSync(path.join(out,'assets')).find(n=>n.endsWith('.css'));const css=fs.readFileSync(path.join(out,'assets',file),'utf8');results.push({mode,artifactUtilityGenerated:new RegExp('padding:\\s*'+value+'px').test(css),cssBytes:Buffer.byteLength(css)});
+ }
+}finally{fs.writeFileSync(cssFile,scoped)}
+if(!results[0].artifactUtilityGenerated||results[1].artifactUtilityGenerated)throw Error('Unexpected class scan result');fs.writeFileSync('docs/reviews/correction/tailwind-scope-verification.json',JSON.stringify({method:'Two clean production control builds; dynamically generated class appears only in docs sentinel, not in source or scripts',results,scope:'src and index.html only'},null,2));console.log(results);

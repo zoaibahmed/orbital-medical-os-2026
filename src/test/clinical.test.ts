@@ -1,0 +1,7 @@
+import {describe,it,expect} from 'vitest'
+import {clinicalSession,updateClinical} from '../state/clinical'
+describe('crew-scoped frontend sessions',()=>{
+ it('starts with a patient and retains an explicit empty-bed choice only for that crew',()=>{expect(clinicalSession('initial-subject').examination).toBe('PATIENT_READY');updateClinical('initial-subject',{examination:'EMPTY_BED'});expect(clinicalSession('second-subject').examination).toBe('PATIENT_READY');expect(clinicalSession('initial-subject').examination).toBe('EMPTY_BED')})
+ it('retains local records without leaking context to another astronaut',()=>{const entry={id:'test',type:'Cycle',minutes:20,date:'2026-11-15',completed:false};updateClinical('test-a',{exercises:[entry],answers:{vision:'Yes'},checkIns:[{id:'one',mood:3,stress:2,note:'private demo',date:'today'}]});expect(clinicalSession('test-a').exercises).toEqual([entry]);expect(clinicalSession('test-b').exercises).toEqual([]);expect(clinicalSession('test-b').answers).toEqual({});expect(clinicalSession('test-b').checkIns).toEqual([])})
+ it('records scanner states without treating visual output as a medical measurement',()=>{updateClinical('scan-test',{examination:'SCAN_ACTIVE'});expect(clinicalSession('scan-test').examination).toBe('SCAN_ACTIVE');updateClinical('scan-test',{examination:'EXAMINATION_COMPLETE'});expect(clinicalSession('scan-test').examination).toBe('EXAMINATION_COMPLETE');expect(clinicalSession('scan-test')).not.toHaveProperty('diagnosis')})
+})

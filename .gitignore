@@ -1,0 +1,36 @@
+node_modules/
+.tools/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.local
+.env*
+!.env.example
+
+# Local authoring backups, logs and generated review/benchmark artifacts
+*.log
+*.blend[0-9]*
+*.zip
+/docs/screenshots/
+/docs/reviews/
+/docs/measurements/
+/docs/design/
+/*.png
+
+# Download/search scratch data; provenance manifests and source assets are kept
+/assets/source/patient/*-tree.json
+/assets/source/patient/zip-entries.json
+/assets/source/patient/zip-tail.bin
+
+# Credentials and private signing material
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Original team delivery is preserved locally; consolidated source lives in server/.
+/nasa-space-medbay-backend-20261115T101336Z-1-001/
+/.local-data/

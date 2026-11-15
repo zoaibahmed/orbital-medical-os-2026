@@ -1,0 +1,10 @@
+{
+  "asset": "Blue Marble global cloud/land/ocean map",
+  "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/bluemarble/images/land_ocean_ice_cloud_2048.jpg",
+  "sourcePage": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+  "credit": "NASA Earth Observatory / NASA Goddard Space Flight Center; Reto Stöckli and Robert Simmon",
+  "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "use": "Texture on independently modelled external Earth sphere; not an environment background or room projection",
+  "sha256": "fb67ac030214c1891994c8f976e7f6c9cd5b0f21586aba8567250781a4fe708e",
+  "bytes": 593729
+}

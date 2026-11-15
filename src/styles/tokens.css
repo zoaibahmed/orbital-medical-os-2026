@@ -1,0 +1,20 @@
+@theme {
+  --color-hull: #101b2a;
+  --color-panel: #203448;
+  --color-porcelain: #dce6ed;
+  --color-hologram: #63dceb;
+  --color-caution: #f3bd61;
+  --color-critical: #ff7a73;
+  --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Bahnschrift', 'Segoe UI', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --surface: #152335;
+  --surface-raised: #1a2d40;
+  --text-muted: #a8bdce;
+  --line: #3b566b;
+  --radius: 5px;
+  --motion-fast: 160ms;
+}

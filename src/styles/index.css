@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { margin: 0; min-width: 320px; background: var(--color-hull); color: var(--color-porcelain); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  h1, h2 { font-family: var(--font-display); line-height: 1.18; font-weight: 600; text-wrap: balance; }
+  h1 { font-size: clamp(1.65rem, 3vw, 2.6rem); margin: 1rem 0; }
+  h2 { font-size: 1.4rem; margin: .75rem 0; }
+  p { margin: .75rem 0; }
+  button, input, select { font: inherit; }
+  button, a, input, select { -webkit-tap-highlight-color: transparent; }
+  button, select { cursor: pointer; }
+  a { color: var(--color-hologram); text-underline-offset: 4px; }
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, [tabindex='-1']:focus-visible { outline: 2px solid var(--color-hologram); outline-offset: 5px; }
+  button { color: inherit; }
+  button:disabled { opacity: .65; cursor: wait; }
+  ::selection { background: var(--color-hologram); color: var(--color-hull); }
+}
+
+@layer components {
+  .app-shell { max-width: 1800px; margin-inline: auto; padding: 0 clamp(1rem, 3vw, 3rem); min-height: 100dvh; display: flex; flex-direction: column; }
+  .app-header { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: .9rem; color: var(--color-porcelain); text-decoration: none; font-family: var(--font-display); font-size: 1.3rem; line-height: 1.2; }
+  .brand svg { color: var(--color-hologram); flex-shrink: 0; }
+  .brand-detail { display: block; margin-top: .3rem; color: var(--text-muted); font: .8rem var(--font-sans); }
+  .simulation-badge, .phase-tag { color: var(--color-hologram); font-size: .8rem; }
+  .simulation-badge { border: 1px solid var(--line); padding: .4rem .7rem; border-radius: var(--radius); }
+  .mission-entry { max-width: 850px; padding: clamp(3rem, 8vh, 7rem) 0; flex: 1; }
+  .mission-mark { width: 64px; height: 64px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 2rem; color: var(--color-hologram); margin-bottom: 2rem; }
+  .mission-entry h1 { font-size: clamp(2.5rem, 6vw, 5rem); max-width: 14ch; }
+  .mission-context { color: var(--text-muted); font-size: .85rem; margin: 0 0 .4rem; }
+  .mission-intro { color: var(--text-muted); max-width: 60ch; font-size: 1.15rem; }
+  .simulation-note { color: var(--color-caution); font-size: .9rem; margin: 1.5rem 0; }
+  .action-row { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0; }
+  .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: .65rem 1.2rem; border: 1px solid var(--color-hologram); border-radius: var(--radius); background: var(--color-hologram); color: var(--color-hull); text-decoration: none; font-weight: 600; transition: background var(--motion-fast), border-color var(--motion-fast); }
+  .button:hover { background: #a4edf5; }
+  .button-secondary { background: transparent; border-color: var(--line); color: var(--color-porcelain); }
+  .button-secondary:hover { background: var(--surface-raised); }
+  .button-critical { background: transparent; color: var(--color-critical); border-color: var(--color-critical); }
+  .button-critical:hover { background: #462b35; }
+  .scope-note { color: var(--text-muted); font-size: .85rem; max-width: 65ch; margin-top: 1.5rem; }
+  .workspace-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem 0; flex-wrap: wrap; }
+  .crew-field { display: flex; align-items: center; gap: .75rem; font-size: .9rem; }
+  .crew-field select { background: var(--surface); border: 1px solid var(--line); color: var(--color-porcelain); min-height: 44px; border-radius: var(--radius); padding: .5rem; max-width: 100%; }
+  .station-navigation { display: flex; flex-wrap: wrap; gap: .4rem; padding: .5rem 0 1rem; }
+  .station-link { display: flex; gap: .6rem; align-items: center; min-height: 44px; padding: .5rem .9rem; color: var(--text-muted); border: 1px solid transparent; border-radius: var(--radius); text-decoration: none; }
+  .station-link:hover { background: var(--surface); color: var(--color-porcelain); }
+  .station-link.active { background: var(--surface-raised); border-color: var(--line); color: var(--color-hologram); }
+  .station-indicator { width: 5px; height: 5px; background: currentColor; border-radius: 50%; }
+  .workspace-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr); gap: 1rem; flex: 1; min-height: 440px; }
+  .workspace-grid.dashboard-layout { grid-template-columns: 1fr; max-width: 960px; width: 100%; min-height: 360px; }
+  .scene-viewport { position: relative; min-height: 440px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--color-hull); }
+  .canvas-layer { position: absolute; inset: 0; }
+  .viewport-caption { position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+  .viewport-caption p { max-width: 38ch; color: var(--text-muted); font-size: .85rem; }
+  .viewport-caption h2 { max-width: 22ch; font-size: 1.5rem; }
+  .viewport-reticle { color: var(--color-hologram); font-size: 2rem; font-weight: 200; }
+  .viewport-status { position: absolute; inset: auto 0 0; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .5rem 1rem; background: var(--surface); border-top: 1px solid var(--line); font-size: .75rem; }
+  .viewport-status button { min-height: 44px; padding: .4rem; background: transparent; color: var(--color-hologram); border: 0; }
+  .station-content { min-width: 0; }
+  .holographic-panel { min-height: 100%; border: 1px solid var(--line); border-top: 2px solid var(--color-hologram); background: var(--surface); border-radius: var(--radius); padding: clamp(1.25rem, 2.5vw, 2.5rem); }
+  .module-description { color: var(--text-muted); max-width: 65ch; }
+  .fixture-preview { margin: 1.5rem 0; padding-top: 1rem; border-top: 1px solid var(--line); }
+  .fixture-preview dl { display: grid; gap: 1rem; margin: 0; }
+  .fixture-preview dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  dt { color: var(--text-muted); font-size: .9rem; }
+  dd { margin: 0; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+  .workspace-controls { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 1rem 0 0; font-size: .85rem; }
+  .workspace-controls > a { min-height: 44px; display: inline-flex; align-items: center; }
+  .motion-option { display: flex; align-items: center; min-height: 44px; gap: .7rem; color: var(--text-muted); font-size: .9rem; cursor: pointer; }
+  .motion-option input { width: 20px; height: 20px; accent-color: var(--color-hologram); }
+  .emergency-trigger { color: var(--color-critical); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); min-height: 44px; padding: .4rem .8rem; margin-left: auto; }
+  .data-provenance { color: var(--text-muted); font-size: .75rem; margin: .75rem 0 1.5rem; }
+  .app-footer { margin-top: auto; min-height: 72px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: .5rem 2rem; flex-wrap: wrap; padding-block: 1rem; font-size: .75rem; color: var(--text-muted); }
+  .emergency-dialog { max-width: min(600px, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); overflow: auto; margin: auto; padding: 2rem; background: var(--surface); color: var(--color-porcelain); border: 1px solid var(--color-critical); border-radius: var(--radius); }
+  .emergency-dialog::backdrop { background: rgb(4 10 17 / 85%); }
+  .emergency-dialog ol { padding-left: 1.5rem; margin: 1.5rem 0; list-style: decimal; }
+  .emergency-dialog li { margin: .75rem 0; }
+  .recovery, .scene-recovery { padding: 2rem; }
+  .scene-recovery { position: relative; }
+  .loading-state { padding: 1rem; color: var(--text-muted); }
+  .skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: .7rem 1rem; background: var(--color-hologram); color: var(--color-hull); transform: translateY(-200%); }
+  .skip-link:focus { transform: translateY(0); }
+}
+
+@media (max-width: 1199px) {
+  .workspace-grid { grid-template-columns: 1fr; }
+  .scene-viewport { min-height: 320px; }
+}
+@media (max-width: 767px) {
+  .app-header { min-height: 88px; }
+  .simulation-badge { max-width: 125px; font-size: .7rem; }
+  .brand { font-size: 1.1rem; gap: .6rem; }
+  .brand-detail { font-size: .7rem; }
+  .crew-field { flex-wrap: wrap; width: 100%; }
+  .crew-field select { flex: 1; min-width: 0; }
+  .station-link { padding: .5rem .7rem; font-size: .85rem; }
+  .workspace-grid { min-height: 0; }
+  .scene-viewport { min-height: 360px; }
+  .viewport-caption { padding: 1.25rem 1.25rem 4rem; }
+  .viewport-status { flex-wrap: wrap; }
+  .emergency-trigger { margin-left: 0; }
+  .holographic-panel { padding: 1.25rem; }
+  .mission-entry { padding-top: 2.5rem; }
+  .mission-mark { margin-bottom: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}
+
+/* Phase 3: the bay occupies the primary workspace; clinical feature entries stay below. */
+@layer components {
+  .workspace-grid:not(.dashboard-layout) { grid-template-columns: minmax(0, 1fr); }
+  .workspace-grid:not(.dashboard-layout) .scene-viewport { min-height: 660px; height: min(76vh, 900px); }
+  .workspace-grid:not(.dashboard-layout) .holographic-panel { min-height: 0; padding: 1.25rem 1.5rem; }
+  .workspace-grid:not(.dashboard-layout) .holographic-panel h1 { font-size: 1.45rem; margin: .5rem 0; }
+  .workspace-grid:not(.dashboard-layout) .fixture-preview { margin: 1rem 0 0; }
+  .workspace-grid:not(.dashboard-layout) .fixture-preview dl { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .workspace-grid:not(.dashboard-layout) .scope-note { margin-top: .75rem; }
+  .environment-loading { position: absolute; inset: 0; background: #101b2a; display: grid; place-items: center; padding: 2rem; text-align: center; color: var(--text-muted); z-index: 2; }
+  .environment-id { position: absolute; left: 1.5rem; top: 1.25rem; display: flex; flex-direction: column; gap: .2rem; padding: .7rem 1rem; background: rgb(12 23 32 / 88%); border-left: 2px solid #79bdc6; pointer-events: none; text-shadow: 0 1px 8px #000; }
+  .environment-id > span { color: #c3d6dc; font-size: .75rem; }
+  .environment-id strong { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; }
+  .environment-id small { color: #c3d6dc; font-size: .75rem; }
+  .scene-tools { position: absolute; bottom: 4.8rem; left: 1.25rem; right: 1.25rem; display: flex; gap: .65rem 1rem; flex-wrap: wrap; align-items: center; pointer-events: none; z-index: 3; }
+  .camera-views { display: flex; flex-wrap: wrap; gap: .3rem; pointer-events: auto; padding: .25rem; background: rgb(12 23 32 / 93%); border: 1px solid #59717f; border-radius: 5px; }
+  .camera-views button { min-height: 44px; font-size: .82rem; padding: .45rem .8rem; border: 1px solid transparent; background: transparent; border-radius: 3px; }
+  .camera-views button[aria-pressed='true'] { border-color: #72949d; background: #28414c; color: #c8f7fa; }
+  .camera-views button:hover { background: #304a54; }
+  .quality-select { background: rgb(12 23 32 / 93%); display: flex; gap: .65rem; align-items: center; pointer-events: auto; padding: .3rem .65rem; border: 1px solid #59717f; border-radius: 5px; font-size: .75rem; }
+  .quality-select select { min-height: 40px; background: #1c303c; color: var(--color-porcelain); border: 0; border-radius: 3px; padding: .3rem; }
+  .scene-tools p { flex-basis: 100%; color: #dce6ed; text-shadow: 0 1px 4px #000; margin: 0; font-size: .72rem; }
+  .viewport-status { z-index: 3; }
+}
+@media (max-width: 767px) {
+  .workspace-grid:not(.dashboard-layout) .scene-viewport { min-height: 600px; height: 76vh; }
+  .scene-tools { bottom: 5.4rem; left: .75rem; right: .75rem; gap: .4rem; }
+  .camera-views { gap: 0; }
+  .camera-views button { padding: .4rem .5rem; font-size: .72rem; }
+  .environment-id { left: 1rem; top: 1rem; }
+}
